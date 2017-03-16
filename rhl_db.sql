@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 16, 2017 at 07:24 AM
+-- Generation Time: Mar 16, 2017 at 02:13 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -102,6 +102,7 @@ CREATE TABLE `tbl_users` (
   `user_password` varchar(100) NOT NULL,
   `user_number` varchar(20) NOT NULL,
   `user_state` varchar(100) NOT NULL,
+  `user_territory` varchar(100) NOT NULL,
   `user_city` varchar(100) NOT NULL,
   `user_role` varchar(50) NOT NULL,
   `user_code` varchar(100) NOT NULL,
@@ -112,13 +113,12 @@ CREATE TABLE `tbl_users` (
 -- Dumping data for table `tbl_users`
 --
 
-INSERT INTO `tbl_users` (`user_id`, `first_name`, `last_name`, `user_name`, `user_email`, `user_password`, `user_number`, `user_state`, `user_city`, `user_role`, `user_code`, `user_date`) VALUES
-(1, 'Dnyanesh', 'M', 'admin', 'dnyanesh.mali@softinfology.com', '8adcb100cdf06ea1525a125786eca9b9', '9689483519', 'Maharashtra', 'Osmanabad', 'admin', '', '2017-03-15 00:00:00'),
-(2, 'Swapnil', 'T', 'swapnilt', 'swapnil@softinfology.com', '03c7c0ace395d80182db07ae2c30f034', '3434334343', 'Maharashtra', 'Pune', 'RSM', 'RSM/Pune/001', '2017-03-15 12:20:47'),
-(3, '', '', '', '', 'e358efa489f58062f10dd7316b65649e', '', '', '', 'RSM', 'RSM//001', '2017-03-15 13:26:06'),
-(4, '', '', '', '', 'e358efa489f58062f10dd7316b65649e', '', '', '', 'RSM', 'RSM//001', '2017-03-15 13:27:30'),
-(5, '', '', '', '', 'e358efa489f58062f10dd7316b65649e', '', '', '', 'RSM', 'RSM//001', '2017-03-15 13:47:37'),
-(6, '', '', '', '', 'e358efa489f58062f10dd7316b65649e', '', '', '', 'RSM', 'RSM//001', '2017-03-15 13:48:40');
+INSERT INTO `tbl_users` (`user_id`, `first_name`, `last_name`, `user_name`, `user_email`, `user_password`, `user_number`, `user_state`, `user_territory`, `user_city`, `user_role`, `user_code`, `user_date`) VALUES
+(1, 'Dnyanesh', 'M', 'admin', 'dnyanesh.mali@softinfology.com', '8adcb100cdf06ea1525a125786eca9b9', '9689483519', 'Maharashtra', '', 'Osmanabad', 'admin', '', '2017-03-15 00:00:00'),
+(2, 'Swapnil', 'T', 'swapnilt', 'swapnil@softinfology.com', '03c7c0ace395d80182db07ae2c30f034', '3434334343', 'Maharashtra', '', 'Pune', 'RSM', 'RSM/Pune/001', '2017-03-15 12:20:47'),
+(7, 'santosh', 'B', 'santoshb', 'santoshbhosale123@gmail.com', 'accc9105df5383111407fd5b41255e23', '345454544545', 'Maharashtra', '', 'Pune', 'ASM', 'ASM/PUNE/001', '2017-03-16 07:48:09'),
+(8, 'John', 'M', 'johnm', 'john@gmail.com', 'e358efa489f58062f10dd7316b65649e', '34343434', 'Uttar Pradesh', '', 'Kanpur', 'RSM', 'RSM/KANPUR/001', '2017-03-16 08:00:16'),
+(9, 'Pitter', 'L', 'pitterl', 'pitter@gmail.com', '25d55ad283aa400af464c76d713c07ad', '4545454545544', 'Maharashtra', 'Kharghar', 'Mumbai', 'TSO', 'TSO/MUMBAI/001', '2017-03-16 13:29:23');
 
 -- --------------------------------------------------------
 
@@ -186,7 +186,7 @@ ALTER TABLE `sales_user`
 -- AUTO_INCREMENT for table `tbl_users`
 --
 ALTER TABLE `tbl_users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `users`
 --
