@@ -12,6 +12,7 @@
         <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
         <script type="text/javascript" src="js/materialize.js"></script>
         <script type="text/javascript" src="js/validation/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="js/validation/additional-methods.min.js"></script>
         <script type="text/javascript" src="js/jquery.form.min.js"></script>
         <script>
              $(document).ready(function() {

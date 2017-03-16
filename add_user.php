@@ -13,14 +13,15 @@ $uemail = $_POST['email'];
 $mnumber = $_POST['mnumber'];
 $city = $_POST['city'];
 $state = $_POST['state'];
+$territory = $_POST['territory'];
 $password = $_POST['password'];
 $pass = md5($password);
 $cdate = date("Y-m-d H:i:s");
-$urole = 'RSM';
+$urole = $_POST['urole'];
 $user_code = $urole.'/'.strtoupper($city).'/'.'001';
 $uname = strtolower($fname).strtolower($lname);
 
-$query = "insert into tbl_users (first_name,last_name,user_name,user_email,user_password,user_number,user_state,user_city,user_role,user_code,user_date) values ('".$fname."','".$lname."','".$uname."','".$uemail."','".$pass."','".$mnumber."','".$state."','".$city."','".$urole."','".$user_code."','".$cdate."')";
+$query = "insert into tbl_users (first_name,last_name,user_name,user_email,user_password,user_number,user_state,user_territory,user_city,user_role,user_code,user_date) values ('".$fname."','".$lname."','".$uname."','".$uemail."','".$pass."','".$mnumber."','".$state."','".$territory."','".$city."','".$urole."','".$user_code."','".$cdate."')";
 
 	if(!mysqli_query($con,$query))
     {

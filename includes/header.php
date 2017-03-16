@@ -109,10 +109,10 @@ if (!isset($_SESSION['uid']))
                                         <div class="collapsible-body" >
                                         <ul>
                                             <li><a href="addusers.php">Add User</a></li>
-                                            <li><a href="rsmlist.php">List of RSM</a></li>
-                                            <li><a href="javascript:void(0)">List of ASM</a></li>
+                                            <li><a href="userlist.php">List of Users</a></li>
+                                          <!--  <li><a href="javascript:void(0)">List of ASM</a></li>
                                             <li><a href="javascript:void(0)">List of TSO</a></li>
-                                            <li><a href="selist.php">List of SE</a></li>
+                                            <li><a href="selist.php">List of SE</a></li> -->
                                         </ul>
                                     </div>
                                   </li>

@@ -60,6 +60,19 @@ and open the template in the editor.
             <label for="email"  class="center-align">Email</label>
           </div>
           </div>
+
+           <div class="row margin">
+          <div class="input-field col s12">
+            <select id="urole" name="urole">
+            <option value="RSM" selected>RSM</option>
+            <option value="ASM">ASM</option>
+            <option value="TSO">TSO</option>
+            <option value="SE">SE</option>
+            </select>
+            <label for="urole" class="center-align">Role</label>
+          </div>
+          </div>
+
 		  <div class="row margin">
           <div class="input-field col s12">
             <i class="mdi-social-person-outline prefix"></i>
@@ -74,6 +87,15 @@ and open the template in the editor.
             <label for="city" class="center-align">City</label>
           </div>
           </div>
+
+          <div class="row margin">
+          <div class="input-field col s12">
+            <i class="mdi-social-person-outline prefix"></i>
+            <input id="territory" name="territory" type="text">
+            <label for="territory" class="center-align">Territory</label>
+          </div>
+        </div>
+
           <div class="row margin">
           <div class="input-field col s12">
             <i class="mdi-social-person-outline prefix"></i>
@@ -114,18 +136,57 @@ and open the template in the editor.
         </div>
  <?php include("includes/footer.php"); ?>    
  <script type="text/javascript">
+
+ $(document).ready(function() {
+$('select').material_select();
+});
+
+
  	$(document).ready(function() {
          $('#adduserform').validate({
                 errorClass: 'validation-error', // so that it doesn't conflict with the error class of alert 
                 rules: {
-                    username: {
+                  fname: {
+                        required: true,
+                        lettersonly: true
+                    },
+                    lname: {
+                        required: true,
+                        lettersonly: true
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    urole: {
                         required: true
                     },
-                    password: {
+                    mnumber: {
                         required: true
+                    },
+                    city: {
+                        required: true,
+                        lettersonly: true
+                    },
+                    state: {
+                        required: true,
+                        lettersonly: true
+                    },
+                    territory: {
+                        required: true,
+                        lettersonly: true
+                    },
+                    password: {
+                        required: true,
+                        minlength : 8
                         
-
-                    }
+                    },
+                     rpassword: {
+                        required: true,
+                        minlength : 8,
+                        equalTo : "#password"
+                        
+                    },
                 },
                 highlight: function(element) {
                     $(element).closest('.space').addClass('has-error');
