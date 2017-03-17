@@ -16,27 +16,26 @@ $con = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME) or
 
  $duser_id=  isset($_REQUEST['duser_id'])?$_REQUEST['duser_id']:"";
 //$role = 'RSM';
+ //echo $duser_id;
  
-if(isset($user_id)){
-	//echo $status_id;
-$query = "delete from tbl_users wher user_id = '".$user_id."'";
+if(isset($duser_id)){
+	echo $duser_id;
+$query = "delete from tbl_users where user_id = '".$duser_id."'";
 
 $rs =  mysqli_query($con, $query);
  
  if(!$rs)
     {
 
-        die('Error :'.mysqli_error());  
+        die('Error :'.mysqli_error()); 
+        echo"0"; 
     }
     else{
       
-        while($row = mysqli_fetch_assoc($rs))
-            //print_r($row);
-           // array_push($data, $row['user_id']);
-$data[] = $row;
+        echo"1";
 
     }
-echo json_encode($data);
+//echo json_encode($data);
  //print_r($data);
 
 }

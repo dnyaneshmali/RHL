@@ -144,7 +144,7 @@ $('select').material_select();
                     var trHTML = '';
                    for(var i=0; i<count; i++){
 
-                    trHTML += '<tr><td>' + json[i].user_id+ '</td><td>' + json[i].user_name+ '</td><td>' + json[i].user_show_pass+ '</td><td>' + json[i].first_name+ '</td><td>' + json[i].last_name+ '</td><td>' + json[i].user_number+ '</td><td>' + json[i].user_code+ '</td><td><a href="javascript:void(0);"  onclick="custatus();" class="btn-floating green tooltip" ><i class="small mdi-action-visibility"></i><span class="tooltiptext">UnApprove</span></a></td><td><a href="javascript:void(0);" onclick="deleted('+ json[i].user_id+');" class="btn-floating red delete-btn tooltip" ><i class="small mdi-action-highlight-remove"></i><span class="tooltiptext">Delete</span></a></td></tr>'
+                    trHTML += '<tr><td>' +json[i].user_id+ '</td><td>' +json[i].user_name+ '</td><td>' +json[i].user_show_pass+ '</td><td>' +json[i].first_name+ '</td><td>' +json[i].last_name+ '</td><td>' +json[i].user_number+ '</td><td>' +json[i].user_code+ '</td><td><a href="javascript:void(0);" onclick="custatus();" class="btn-floating green tooltip" ><i class="small mdi-action-visibility"></i><span class="tooltiptext">UnApprove</span></a></td><td><a href="javascript:void(0);" onclick="deleted('+json[i].user_id+');" class="btn-floating red delete-btn tooltip" ><i class="small mdi-action-highlight-remove"></i><span class="tooltiptext">Delete</span></a></td></tr>'
                  }
                  //console.log(trHTML);
                     // $.each(json, function(i, item) {
@@ -164,6 +164,7 @@ $('select').material_select();
 
          function deleted(id)
             {
+                alert(id);
                 var deleteuser_id = id;
             if (confirm('Sure to Delete ?'))
                     {
@@ -174,7 +175,7 @@ $('select').material_select();
                         datatype: "json",
                         success: function(response)
                         {
-                                console.log(data);
+                                console.log(response);
                                 location.reload();
 
 
