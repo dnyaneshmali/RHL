@@ -55,12 +55,13 @@ and open the template in the editor.
                                                             <tr>
                                                             <th data-field="id">ID </th>
                                                             <th data-field="Date">Username </th>
+                                                            <th data-field="Email">Password</th>
                                                             <th data-field="Time">First Name </th>
                                                             <th data-field="Name">Last Name</th>
                                                             <th data-field="price">Contact No</th>
-                                                            <th data-field="Email">Email</th>
                                                             <th data-field="Address">Code</th>
-                                                            <th data-field="price">Date</th>
+                                                            <th data-field="price">Status</th>
+                                                            <th data-field="price">Action</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -105,7 +106,7 @@ $('select').material_select();
                     var trHTML = '';
                    for(var i=0; i<count; i++){
 
-                    trHTML += '<tr><td>' + json[i].user_id+ '</td><td>' + json[i].user_name+ '</td><td>' + json[i].first_name+ '</td><td>' + json[i].last_name+ '</td><td>' + json[i].user_number+ '</td><td>' + json[i].user_email+ '</td><td>' + json[i].user_code+ '</td><td>' + json[i].user_date+ '</td></tr>'
+                    trHTML += '<tr><td>' + json[i].user_id+ '</td><td>' + json[i].user_name+ '</td><td>' + json[i].user_show_pass+ '</td><td>' + json[i].first_name+ '</td><td>' + json[i].last_name+ '</td><td>' + json[i].user_number+ '</td><td>' + json[i].user_code+ '</td><td><a href="javascript:void(0);"  onclick="custatus();" class="btn-floating green tooltip" ><i class="small mdi-action-visibility"></i><span class="tooltiptext">UnApprove</span></a></td><td><a href="javascript:void(0);" onclick="deleted('+ json[i].user_id+');" class="btn-floating red delete-btn tooltip" ><i class="small mdi-action-highlight-remove"></i><span class="tooltiptext">Delete</span></a></td></tr>'
                  }
                  //console.log(trHTML);
                     // $.each(json, function(i, item) {
@@ -143,7 +144,7 @@ $('select').material_select();
                     var trHTML = '';
                    for(var i=0; i<count; i++){
 
-                    trHTML += '<tr><td>' + json[i].user_id+ '</td><td>' + json[i].user_name+ '</td><td>' + json[i].first_name+ '</td><td>' + json[i].last_name+ '</td><td>' + json[i].user_number+ '</td><td>' + json[i].user_email+ '</td><td>' + json[i].user_code+ '</td><td>' + json[i].user_date+ '</td></tr>'
+                    trHTML += '<tr><td>' + json[i].user_id+ '</td><td>' + json[i].user_name+ '</td><td>' + json[i].user_show_pass+ '</td><td>' + json[i].first_name+ '</td><td>' + json[i].last_name+ '</td><td>' + json[i].user_number+ '</td><td>' + json[i].user_code+ '</td><td><a href="javascript:void(0);"  onclick="custatus();" class="btn-floating green tooltip" ><i class="small mdi-action-visibility"></i><span class="tooltiptext">UnApprove</span></a></td><td><a href="javascript:void(0);" onclick="deleted('+ json[i].user_id+');" class="btn-floating red delete-btn tooltip" ><i class="small mdi-action-highlight-remove"></i><span class="tooltiptext">Delete</span></a></td></tr>'
                  }
                  //console.log(trHTML);
                     // $.each(json, function(i, item) {
@@ -160,6 +161,29 @@ $('select').material_select();
             });
                  });
                  });
+
+         function deleted(id)
+            {
+                var deleteuser_id = id;
+            if (confirm('Sure to Delete ?'))
+                    {
+                        $.ajax({
+                        type: "POST",
+                        url: "action_status.php",
+                        data:{"duser_id":deleteuser_id},
+                        datatype: "json",
+                        success: function(response)
+                        {
+                                console.log(data);
+                                location.reload();
+
+
+                            }
+                        });
+                    }
+                }
+
+
         </script>
     </body>
 
