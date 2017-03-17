@@ -40,3 +40,57 @@ $rs =  mysqli_query($con, $query);
 
 }
 
+
+ $dauser_id=  isset($_REQUEST['dauser_id'])?$_REQUEST['dauser_id']:"";
+//$role = 'RSM';
+ //echo $dauser_id;
+ 
+if(isset($dauser_id)){
+	//echo $dauser_id;
+$query = "update tbl_users set user_status = '0' where user_id = '".$dauser_id."'";
+
+$rs =  mysqli_query($con, $query);
+ 
+ if(!$rs)
+    {
+
+        die('Error :'.mysqli_error()); 
+        echo"0"; 
+    }
+    else{
+      
+        echo"1";
+
+    }
+//echo json_encode($data);
+ //print_r($data);
+
+}
+
+
+$asuser_id=  isset($_REQUEST['asuser_id'])?$_REQUEST['asuser_id']:"";
+//$role = 'RSM';
+ //echo $dauser_id;
+ 
+if(isset($asuser_id)){
+	//echo $dauser_id;
+$query = "update tbl_users set user_status = '1' where user_id = '".$asuser_id."'";
+
+$rs =  mysqli_query($con, $query);
+ 
+ if(!$rs)
+    {
+
+        die('Error :'.mysqli_error()); 
+        echo"0"; 
+    }
+    else{
+      
+        echo"1";
+
+    }
+//echo json_encode($data);
+ //print_r($data);
+
+}
+

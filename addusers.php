@@ -213,14 +213,14 @@ $('select').material_select();
                         data: $(form).serialize(),
                         url: "add_user.php",
                         success: function(data) {
-                        	
+                        	console.log(data);
                         	  if (data === '1') {
 
                                 alert('Success');
-                                $('#adduserform').clearForm();
+                                //$('#adduserform').clearForm();
                             } else {
                                 alert('Fail');
-                                $('#adduserform').clearForm();
+                                //$('#adduserform').clearForm();
                             }
                         },
                         error: function() {
