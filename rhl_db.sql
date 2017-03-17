@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 16, 2017 at 02:13 PM
+-- Generation Time: Mar 17, 2017 at 02:27 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -100,11 +100,13 @@ CREATE TABLE `tbl_users` (
   `user_name` varchar(100) NOT NULL,
   `user_email` varchar(100) NOT NULL,
   `user_password` varchar(100) NOT NULL,
+  `user_show_pass` varchar(100) NOT NULL,
   `user_number` varchar(20) NOT NULL,
   `user_state` varchar(100) NOT NULL,
   `user_territory` varchar(100) NOT NULL,
   `user_city` varchar(100) NOT NULL,
   `user_role` varchar(50) NOT NULL,
+  `user_status` varchar(10) NOT NULL,
   `user_code` varchar(100) NOT NULL,
   `user_date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -113,12 +115,22 @@ CREATE TABLE `tbl_users` (
 -- Dumping data for table `tbl_users`
 --
 
-INSERT INTO `tbl_users` (`user_id`, `first_name`, `last_name`, `user_name`, `user_email`, `user_password`, `user_number`, `user_state`, `user_territory`, `user_city`, `user_role`, `user_code`, `user_date`) VALUES
-(1, 'Dnyanesh', 'M', 'admin', 'dnyanesh.mali@softinfology.com', '8adcb100cdf06ea1525a125786eca9b9', '9689483519', 'Maharashtra', '', 'Osmanabad', 'admin', '', '2017-03-15 00:00:00'),
-(2, 'Swapnil', 'T', 'swapnilt', 'swapnil@softinfology.com', '03c7c0ace395d80182db07ae2c30f034', '3434334343', 'Maharashtra', '', 'Pune', 'RSM', 'RSM/Pune/001', '2017-03-15 12:20:47'),
-(7, 'santosh', 'B', 'santoshb', 'santoshbhosale123@gmail.com', 'accc9105df5383111407fd5b41255e23', '345454544545', 'Maharashtra', '', 'Pune', 'ASM', 'ASM/PUNE/001', '2017-03-16 07:48:09'),
-(8, 'John', 'M', 'johnm', 'john@gmail.com', 'e358efa489f58062f10dd7316b65649e', '34343434', 'Uttar Pradesh', '', 'Kanpur', 'RSM', 'RSM/KANPUR/001', '2017-03-16 08:00:16'),
-(9, 'Pitter', 'L', 'pitterl', 'pitter@gmail.com', '25d55ad283aa400af464c76d713c07ad', '4545454545544', 'Maharashtra', 'Kharghar', 'Mumbai', 'TSO', 'TSO/MUMBAI/001', '2017-03-16 13:29:23');
+INSERT INTO `tbl_users` (`user_id`, `first_name`, `last_name`, `user_name`, `user_email`, `user_password`, `user_show_pass`, `user_number`, `user_state`, `user_territory`, `user_city`, `user_role`, `user_status`, `user_code`, `user_date`) VALUES
+(1, 'Dnyanesh', 'M', 'admin', 'dnyanesh.mali@softinfology.com', '8adcb100cdf06ea1525a125786eca9b9', '', '9689483519', 'Maharashtra', '', 'Osmanabad', 'admin', '1', 'ASM/PUNE/2', '2017-03-15 00:00:00'),
+(7, 'santosh', 'B', 'santoshb', 'santoshbhosale123@gmail.com', 'accc9105df5383111407fd5b41255e23', '', '345454544545', 'Maharashtra', '', 'Pune', 'ASM', '1', 'ASM/PUNE/1', '2017-03-16 07:48:09'),
+(8, 'John', 'M', 'johnm', 'john@gmail.com', 'e358efa489f58062f10dd7316b65649e', '', '34343434', 'Uttar Pradesh', '', 'Kanpur', 'RSM', '0', 'RSM/KANPUR/1', '2017-03-16 08:00:16'),
+(9, 'Pitter', 'L', 'pitterl', 'pitter@gmail.com', '25d55ad283aa400af464c76d713c07ad', '', '4545454545544', 'Maharashtra', 'Kharghar', 'Mumbai', 'TSO', '1', 'TSO/MUMBAI/1', '2017-03-16 13:29:23'),
+(10, 'Mark', 'K', 'markk', 'mark@gmail.com', '1bbd886460827015e5d605ed44252251', '11111111', '343434343434', 'Bengal', 'Howrah', 'Kolkata', 'SE', '1', 'SE/KOLKATA/1', '2017-03-17 06:25:16'),
+(11, 'Matt', 'R', 'mattr', 'matt@gmail.com', 'bae5e3208a3c700e3db642b6631e95b9', '22222222', '324324424', 'Maharashtra', 'Sayan', 'Mumbai', 'RSM', '', 'RSM/MUMBAI/1', '2017-03-17 11:53:43'),
+(53, 'sdfsf', 'sdfsdf', 'sdfsfsdfsdf', 'sdfdfdfadfasd@dsfsdf.com', 'bbb8aae57c104cda40c93843ad5e6db8', '111111111', '34534', 'sdfsf', 'dfdf', 'sdfdsf', 'ASM', '0', 'ASM/SDFDSF/2', '2017-03-17 14:09:51'),
+(55, 'sdfsf', 'sdfsdf', 'sdfsfsdfsdf', 'sdfdfdfadfasd@dsfsdf.com', 'bbb8aae57c104cda40c93843ad5e6db8', '111111111', '34534', 'sdfsf', 'dfdf', 'sdfdsf', 'ASM', '0', 'ASM/SDFDSF/1', '2017-03-17 14:14:28'),
+(56, 'sdfsf', 'sdfsdf', 'sdfsfsdfsdf', 'sdfdfdfadfasd@dsfsdf.com', 'bbb8aae57c104cda40c93843ad5e6db8', '111111111', '34534', 'sdfsf', 'dfdf', 'sdfdsf', 'ASM', '0', 'ASM/SDFDSF/1', '2017-03-17 14:14:56'),
+(57, 'sdfsf', 'sdfsdf', 'sdfsfsdfsdf', 'sdfdfdfadfasd@dsfsdf.com', 'bbb8aae57c104cda40c93843ad5e6db8', '111111111', '34534', 'sdfsf', 'dfdf', 'sdfdsf', 'ASM', '0', 'ASM/SDFDSF/1', '2017-03-17 14:15:41'),
+(58, 'sdfsf', 'sdfsdf', 'sdfsfsdfsdf', 'sdfdfdfadfasd@dsfsdf.com', 'bbb8aae57c104cda40c93843ad5e6db8', '111111111', '34534', 'sdfsf', 'dfdf', 'Pune', 'ASM', '0', 'ASM/PUNE/1', '2017-03-17 14:17:10'),
+(59, 'sdfsf', 'sdfsdf', 'sdfsfsdfsdf', 'sdfdfdfadfasd@dsfsdf.com', 'bbb8aae57c104cda40c93843ad5e6db8', '111111111', '34534', 'sdfsf', 'dfdf', 'Pune', 'ASM', '0', 'ASM/PUNE/2', '2017-03-17 14:19:28'),
+(60, 'sdfsf', 'sdfsdf', 'sdfsfsdfsdf', 'sdfdfdfadfasd@dsfsdf.com', 'bbb8aae57c104cda40c93843ad5e6db8', '111111111', '34534', 'sdfsf', 'dfdf', 'Pune', 'ASM', '0', 'ASM/PUNE/3', '2017-03-17 14:19:49'),
+(61, 'testasm', 'p', 'testasmp', 'sdfadfasd@dsfsdfd.com', 'bbb8aae57c104cda40c93843ad5e6db8', '111111111', '343434343', 'sdfsdf', 'sdfsdf', 'Pune', 'RSM', '0', 'RSM/PUNE/1', '2017-03-17 14:21:28'),
+(62, 'testasm', 'p', 'testasmp', 'sdfadfasd@dsfsdfd.com', 'bbb8aae57c104cda40c93843ad5e6db8', '111111111', '343434343', 'sdfsdf', 'sdfsdf', 'Pune', 'ASM', '0', 'ASM/PUNE/2', '2017-03-17 14:21:43');
 
 -- --------------------------------------------------------
 
@@ -186,7 +198,7 @@ ALTER TABLE `sales_user`
 -- AUTO_INCREMENT for table `tbl_users`
 --
 ALTER TABLE `tbl_users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
 --
 -- AUTO_INCREMENT for table `users`
 --
