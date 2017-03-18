@@ -1,209 +1,269 @@
--- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
---
--- Host: 127.0.0.1
--- Generation Time: Mar 17, 2017 at 02:27 PM
--- Server version: 10.1.16-MariaDB
--- PHP Version: 5.6.24
+/*
+SQLyog Community v10.51 
+MySQL - 5.5.11 : Database - rhl_db
+*********************************************************************
+*/
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
+/*!40101 SET NAMES utf8 */;
 
+/*!40101 SET SQL_MODE=''*/;
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`rhl_db` /*!40100 DEFAULT CHARACTER SET latin1 */;
 
---
--- Database: `rhl_db`
---
+/*Table structure for table `dist_appoint` */
 
--- --------------------------------------------------------
+DROP TABLE IF EXISTS `dist_appoint`;
 
---
--- Table structure for table `distributer_user`
---
+CREATE TABLE `dist_appoint` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fr_name` varchar(250) DEFAULT NULL,
+  `fr_address` varchar(250) DEFAULT NULL,
+  `fr_contact` varchar(250) DEFAULT NULL,
+  `fr_propname` varchar(250) DEFAULT NULL,
+  `fr_email` varchar(250) DEFAULT NULL,
+  `fr_tin` varchar(250) DEFAULT NULL,
+  `fr_cst` varchar(250) DEFAULT NULL,
+  `fr_pan` varchar(250) DEFAULT NULL,
+  `fr_bank` varchar(250) DEFAULT NULL,
+  `fr_baccont` varchar(250) DEFAULT NULL,
+  `fr_bifsc` varchar(250) DEFAULT NULL,
+  `fr_transport` varchar(250) DEFAULT NULL,
+  `fr_holiday` varchar(250) DEFAULT NULL,
+  `fr_agencurnt` varchar(250) DEFAULT NULL,
+  `fr_agenprev` varchar(250) DEFAULT NULL,
+  `fr_obusiness` varchar(250) DEFAULT NULL,
+  `fr_mdistrb` varchar(250) DEFAULT NULL,
+  `fr_exparea` varchar(250) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+
+/*Data for the table `dist_appoint` */
+
+insert  into `dist_appoint`(`id`,`fr_name`,`fr_address`,`fr_contact`,`fr_propname`,`fr_email`,`fr_tin`,`fr_cst`,`fr_pan`,`fr_bank`,`fr_baccont`,`fr_bifsc`,`fr_transport`,`fr_holiday`,`fr_agencurnt`,`fr_agenprev`,`fr_obusiness`,`fr_mdistrb`,`fr_exparea`) values (7,'test','test','1111111','test','test@mail.com','hg','hh','hh','hh','hh','hh','hhh','hhh','hhh','hhhh','hhhhh','hhhhhhhh','hhhhhhhhhhhhhh');
+
+/*Table structure for table `distributer_user` */
+
+DROP TABLE IF EXISTS `distributer_user`;
 
 CREATE TABLE `distributer_user` (
-  `d_id` int(11) NOT NULL,
+  `d_id` int(11) NOT NULL AUTO_INCREMENT,
   `d_name` varchar(100) DEFAULT NULL,
   `d_location` varchar(250) DEFAULT NULL,
   `d_contact` varchar(100) DEFAULT NULL,
   `d_email` varchar(100) DEFAULT NULL,
   `selocation` varchar(250) DEFAULT NULL,
   `ddate` varchar(100) DEFAULT NULL,
-  `dtime` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `dtime` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`d_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `distributer_user`
---
+/*Data for the table `distributer_user` */
 
-INSERT INTO `distributer_user` (`d_id`, `d_name`, `d_location`, `d_contact`, `d_email`, `selocation`, `ddate`, `dtime`) VALUES
-(3, 'bvcbfgdssdfs', 'bvcbcfdsfdsfds', '4444444', 'vbcbcvbvc@fg.dfdsf', NULL, NULL, NULL),
-(4, 'prashant', 'pune', '8600249455', 'prashant@mail.com', NULL, NULL, NULL),
-(5, 'fgfdgfdg', 'fgfdgf', '4444444', 'hjhgj@gf.dgfg', NULL, NULL, NULL),
-(6, 'fgfdgfdg', 'fgfdgf', '4444444', 'hjhgj@gf.dgfg', NULL, NULL, NULL),
-(7, 'fgfdgfdg', 'fgfdgf', '4444444', 'hjhgj@gf.dgfg', NULL, NULL, NULL),
-(8, 'fgfdgfdg', 'fgfdgf', '4444444', 'hjhgj@gf.dgfg', NULL, NULL, NULL),
-(9, 'fgfdgfdg', 'fgfdgf', '4444444', 'hjhgj@gf.dgfg', NULL, NULL, NULL),
-(10, 'fgfdgfdg', 'fgfdgf', '4444444', 'hjhgj@gf.dgfg', NULL, NULL, NULL),
-(11, 'fgfdgfdg', 'fgfdgf', '4444444', 'hjhgj@gf.dgfg', NULL, NULL, NULL),
-(12, 'fgfdgfdg', 'fgfdgf', '4444444', 'hjhgj@gf.dgfg', NULL, NULL, NULL),
-(13, 'fgfdgfdg', 'fgfdgf', '4444444', 'hjhgj@gf.dgfg', NULL, NULL, NULL),
-(14, 'fgfdgfdg', 'fgfdgf', '4444444', 'hjhgj@gf.dgfg', NULL, NULL, NULL),
-(15, 'fgfdgfdg', 'fgfdgf', '4444444', 'hjhgj@gf.dgfg', NULL, NULL, NULL),
-(16, 'fgfdgfdg', 'fgfdgf', '4444444', 'hjhgj@gf.dgfg', NULL, NULL, NULL),
-(17, 'amit', 'pune', '4444444', 'hjhgj@gf.dgfg', NULL, NULL, NULL),
-(18, 'prashant', 'pune', '8600249455', 'test@mail.com', 'Waterloo', NULL, NULL),
-(19, 'prashant', 'pune', '8600249455', 'test@mail.com', 'Waterloo', NULL, NULL),
-(25, 'prashant', 'pune', '8600249455', 'test@mail.com', 'Waterloo', '2017/3/10', '10:15 pm'),
-(26, 'prashant', 'pune', '8600249455', 'prashant@mail.com', 'Waterloo', '2017/3/10', '10:15 pm'),
-(29, 'fdf', 'fdsf', '1111111111', 'dfdsf@fgfdg.gf', 'Vanier', '2017/3/10', '10:15 pm');
+insert  into `distributer_user`(`d_id`,`d_name`,`d_location`,`d_contact`,`d_email`,`selocation`,`ddate`,`dtime`) values (3,'bvcbfgdssdfs','bvcbcfdsfdsfds','4444444','vbcbcvbvc@fg.dfdsf',NULL,NULL,NULL),(4,'prashant','pune','8600249455','prashant@mail.com',NULL,NULL,NULL),(5,'fgfdgfdg','fgfdgf','4444444','hjhgj@gf.dgfg',NULL,NULL,NULL),(6,'fgfdgfdg','fgfdgf','4444444','hjhgj@gf.dgfg',NULL,NULL,NULL),(7,'fgfdgfdg','fgfdgf','4444444','hjhgj@gf.dgfg',NULL,NULL,NULL),(8,'fgfdgfdg','fgfdgf','4444444','hjhgj@gf.dgfg',NULL,NULL,NULL);
 
--- --------------------------------------------------------
+/*Table structure for table `emp_dsr` */
 
---
--- Table structure for table `sales_user`
---
+DROP TABLE IF EXISTS `emp_dsr`;
+
+CREATE TABLE `emp_dsr` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `emp_name` varchar(250) DEFAULT NULL,
+  `emp_design` varchar(250) DEFAULT NULL,
+  `emp_terit` varchar(250) DEFAULT NULL,
+  `emp_headqtr` varchar(250) DEFAULT NULL,
+  `emp_state` varchar(250) DEFAULT NULL,
+  `date` varchar(250) DEFAULT NULL,
+  `emp_workwith` varchar(250) DEFAULT NULL,
+  `emp_tradename` varchar(250) DEFAULT NULL,
+  `emp_trdcon` varchar(250) DEFAULT NULL,
+  `emp_trdadd` varchar(250) DEFAULT NULL,
+  `emp_purvisit` varchar(250) DEFAULT NULL,
+  `emp_orderb` varchar(250) DEFAULT NULL,
+  `emp_ordamt` varchar(250) DEFAULT NULL,
+  `emp_trdrmk` varchar(250) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+/*Data for the table `emp_dsr` */
+
+insert  into `emp_dsr`(`id`,`emp_name`,`emp_design`,`emp_terit`,`emp_headqtr`,`emp_state`,`date`,`emp_workwith`,`emp_tradename`,`emp_trdcon`,`emp_trdadd`,`emp_purvisit`,`emp_orderb`,`emp_ordamt`,`emp_trdrmk`) values (1,'shivay','God Father','duniya','kailash','kailsh','0/0/0000','vishnu','human','9999999','mangal','murder','25','fdsfsd','fdfds');
+
+/*Table structure for table `ms_stock` */
+
+DROP TABLE IF EXISTS `ms_stock`;
+
+CREATE TABLE `ms_stock` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `fr_name` varchar(250) DEFAULT NULL,
+  `fr_address` varchar(250) DEFAULT NULL,
+  `fr_contact` varchar(250) DEFAULT NULL,
+  `fr_propname` varchar(250) DEFAULT NULL,
+  `fr_email` varchar(250) DEFAULT NULL,
+  `fr_tin` varchar(250) DEFAULT NULL,
+  `fr_cst` varchar(250) DEFAULT NULL,
+  `fr_pan` varchar(250) DEFAULT NULL,
+  `fr_bank` varchar(250) DEFAULT NULL,
+  `fr_baccont` varchar(250) DEFAULT NULL,
+  `fr_bifsc` varchar(250) DEFAULT NULL,
+  `fr_transport` varchar(250) DEFAULT NULL,
+  `fr_holiday` varchar(250) DEFAULT NULL,
+  `fr_agencurnt` varchar(250) DEFAULT NULL,
+  `fr_agenprev` varchar(250) DEFAULT NULL,
+  `fr_obusiness` varchar(250) DEFAULT NULL,
+  `fr_mdistrb` varchar(250) DEFAULT NULL,
+  `fr_exparea` varchar(250) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
+/*Data for the table `ms_stock` */
+
+insert  into `ms_stock`(`id`,`fr_name`,`fr_address`,`fr_contact`,`fr_propname`,`fr_email`,`fr_tin`,`fr_cst`,`fr_pan`,`fr_bank`,`fr_baccont`,`fr_bifsc`,`fr_transport`,`fr_holiday`,`fr_agencurnt`,`fr_agenprev`,`fr_obusiness`,`fr_mdistrb`,`fr_exparea`) values (8,'shriram market','ayodhya','8600249488','shriram','shriram@mail.com','shr111','shr111','shr777','ayodhybank','abk555','ifsc444','truck','sunday','ayodhya','ayodhya','nothing','nothing','nothing'),(9,'RamIT','WTC','77777777777777','prashant','ramit@mail.com','f88','gf88','gg88','fd8','fgf888','fgfgf88','dfdf88','fdsfd','dfs','gfgd','gff','fgdg','hggh');
+
+/*Table structure for table `order_product` */
+
+DROP TABLE IF EXISTS `order_product`;
+
+CREATE TABLE `order_product` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `product` varchar(250) DEFAULT NULL,
+  `grams` varchar(250) DEFAULT NULL,
+  `qunt_case` varchar(250) DEFAULT NULL,
+  `percval` varchar(250) DEFAULT NULL,
+  `tocase` varchar(250) DEFAULT NULL,
+  `toamt` varchar(250) DEFAULT NULL,
+  `order_id` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
+
+/*Data for the table `order_product` */
+
+insert  into `order_product`(`id`,`product`,`grams`,`qunt_case`,`percval`,`tocase`,`toamt`,`order_id`) values (1,'hgf','g','ghf','gh','gf','gh','gfh'),(2,'ASM','fdsfds','fdsf','dfdsf','fdsf','dfdsf','111'),(3,'TSO','dfds','fdsf','dfsf','dfsfdsf','dfffds','111'),(4,'ASM','50','2','25','50','100','111'),(5,'SE','25','1','2','20','200','111'),(6,'ASM','10','10','10','10','1000','0'),(7,'SE','20','20','20','200','2000','0'),(8,'ASM','10','10','10','10','1000','2'),(9,'SE','20','20','20','200','2000','2'),(10,'ASM','10','10','10','10','1000','3'),(11,'SE','20','20','20','200','2000','3'),(12,'SE','20','20','20','200','2000','3'),(13,'ASM','10','10','10','10','1000','4'),(14,'SE','20','20','20','200','2000','4'),(15,'SE','20','20','20','200','2000','4');
+
+/*Table structure for table `orders` */
+
+DROP TABLE IF EXISTS `orders`;
+
+CREATE TABLE `orders` (
+  `dis_name` varchar(250) DEFAULT NULL,
+  `dis_town` varchar(250) DEFAULT NULL,
+  `tso_name` varchar(250) DEFAULT NULL,
+  `contact` varchar(250) DEFAULT NULL,
+  `pay_method` varchar(250) DEFAULT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+/*Data for the table `orders` */
+
+insert  into `orders`(`dis_name`,`dis_town`,`tso_name`,`contact`,`pay_method`,`id`) values ('prashant','pune','ranjit','8600249455','CHEQUE',1),('prashant','pune','ranjit','8600249455','CHEQUE',2),('prashant','pune','ranjit','8600249455','CHEQUE',3),('prashant','pune','ranjit','8600249455','CHEQUE',4);
+
+/*Table structure for table `sales_user` */
+
+DROP TABLE IF EXISTS `sales_user`;
 
 CREATE TABLE `sales_user` (
-  `s_id` int(11) NOT NULL,
+  `s_id` int(11) NOT NULL AUTO_INCREMENT,
   `s_name` varchar(100) DEFAULT NULL,
   `s_email` varchar(100) DEFAULT NULL,
   `s_contact` varchar(100) DEFAULT NULL,
   `s_username` varchar(100) DEFAULT NULL,
   `s_password` varchar(100) DEFAULT NULL,
-  `desigantion` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `desigantion` varchar(250) DEFAULT NULL,
+  PRIMARY KEY (`s_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `sales_user`
---
+/*Data for the table `sales_user` */
 
-INSERT INTO `sales_user` (`s_id`, `s_name`, `s_email`, `s_contact`, `s_username`, `s_password`, `desigantion`) VALUES
-(2, 'fdgfdg', 'hgfhgf@fdg.ghgfh', 'gfhgfhfg', 'admin', 'admin@123', 'SE'),
-(3, 'fgfdgdg', 'fgfg@hfgf.gfdg', 'fdfdsfdsfds', 'fsdfsdfsd', 'dfdsfsdfsdfs', NULL);
+insert  into `sales_user`(`s_id`,`s_name`,`s_email`,`s_contact`,`s_username`,`s_password`,`desigantion`) values (2,'fdgfdg','hgfhgf@fdg.ghgfh','gfhgfhfg','admin','admin@123','SE'),(3,'fgfdgdg','fgfg@hfgf.gfdg','fdfdsfdsfds','admin','admin@123','TSO'),(4,'fgfdgdg','fgfg@hfgf.gfdg','fdfdsfdsfds','admin','admin@123','RSM');
 
--- --------------------------------------------------------
+/*Table structure for table `sur_product` */
 
---
--- Table structure for table `tbl_users`
---
+DROP TABLE IF EXISTS `sur_product`;
+
+CREATE TABLE `sur_product` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `br_hrproduct` varchar(255) DEFAULT NULL,
+  `lo_hrproduct` varchar(255) DEFAULT NULL,
+  `br_skproduct` varchar(255) DEFAULT NULL,
+  `lo_skproduct` varchar(255) DEFAULT NULL,
+  `br_pordpercnt` varchar(100) DEFAULT NULL,
+  `lo_pordpercnt` varchar(100) DEFAULT NULL,
+  `suser_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+/*Data for the table `sur_product` */
+
+insert  into `sur_product`(`id`,`br_hrproduct`,`lo_hrproduct`,`br_skproduct`,`lo_skproduct`,`br_pordpercnt`,`lo_pordpercnt`,`suser_id`) values (1,'jhgj,hgjhgj,hgjhgj,','hjhgj,hjgj,hjgj,','jhgjg,hgjhgj,jghj,','hjghj,hjhgj,jhgj,','55','55',0),(2,'lav,lav,lav,','kush,kush,kush,','hanuman,hanuman,vali,','sugriv,vali,hanuman,','2000','1000',20),(3,'fgh,klf,kjlfgd,','fgdjkl,lkfdg,lkhn,','klhghfkj,lghkjl,gkjlfd,','kjlghn,gjklfdgdjkl,kljgfdgfdhj,','55','55',21);
+
+/*Table structure for table `sur_user` */
+
+DROP TABLE IF EXISTS `sur_user`;
+
+CREATE TABLE `sur_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(250) DEFAULT NULL,
+  `address` varchar(250) DEFAULT NULL,
+  `state` varchar(250) DEFAULT NULL,
+  `retail_no` int(11) DEFAULT NULL,
+  `employe_no` int(11) DEFAULT NULL,
+  `scheme` varchar(250) DEFAULT NULL,
+  `advert` varchar(250) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+
+/*Data for the table `sur_user` */
+
+insert  into `sur_user`(`id`,`name`,`address`,`state`,`retail_no`,`employe_no`,`scheme`,`advert`) values (1,'fgf','fdgfg','fgdgdg',5,56,'on,on,','on,on,'),(2,'prashant','pune','maharstra',85,25,'coupons,,','coupons,,'),(3,'harsh','khradi','maharastar',50,88,'extra qty,luckey draw,scrach card,','extra qty,luckey draw,scrach card,'),(4,'gfdg','gfdgfd','gfdg',5,564,'coupons,priceoff,','coupons,priceoff,'),(5,'fvbvcb','vcbvcb','vcbcbvcv',65,654654654,'luckey draw,scrach card,','luckey draw,scrach card,'),(6,'fdgdg','fdgfdg','fgfdgf',5,5,'luckey draw,scrach card,','luckey draw,scrach card,'),(7,'fdgdg','fdgfdg','fgfdgf',5,5,'luckey draw,scrach card,','luckey draw,scrach card,'),(8,'shriram','ayodhya','ayodhya',12000,2155,'coupons,','coupons,'),(14,'fgdg','fdgdgdf','fdgfdgfd',7,7,'extra qty,luckey draw,','TV,Pamphlets,'),(15,'fgdg','fgdg','fdgdg',887,87878,'coupons,priceoff,','TV,News,'),(16,'hgfhf','gfhgfh','ghgfhgf',78,65,'extra qty,','TV,'),(17,'hjgj','hjhgjhg','jhgjhg',55,555,'coupons,','Mouth Publicity,'),(18,'gfdg','fdgfdg','fgdg',455,454,'coupons,','TV,'),(19,'gfhfh','gfhgfh','gfhgfh',545,54,'coupons,','Mouth Publicity,'),(20,'shri','bharat','bhrat',100000,1222222,'luckey draw,','TV,'),(21,'prashant','puine','dgh',65,55,'luckey draw,','TV,');
+
+/*Table structure for table `tbl_users` */
+
+DROP TABLE IF EXISTS `tbl_users`;
 
 CREATE TABLE `tbl_users` (
-  `user_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `first_name` varchar(100) NOT NULL,
   `last_name` varchar(100) NOT NULL,
   `user_name` varchar(100) NOT NULL,
   `user_email` varchar(100) NOT NULL,
   `user_password` varchar(100) NOT NULL,
-  `user_show_pass` varchar(100) NOT NULL,
   `user_number` varchar(20) NOT NULL,
   `user_state` varchar(100) NOT NULL,
-  `user_territory` varchar(100) NOT NULL,
   `user_city` varchar(100) NOT NULL,
   `user_role` varchar(50) NOT NULL,
-  `user_status` varchar(10) NOT NULL,
   `user_code` varchar(100) NOT NULL,
-  `user_date` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `user_date` datetime NOT NULL,
+  `user_show_pass` varchar(250) NOT NULL,
+  `user_territory` varchar(250) NOT NULL,
+  `user_status` int(10) NOT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `tbl_users`
---
+/*Data for the table `tbl_users` */
 
-INSERT INTO `tbl_users` (`user_id`, `first_name`, `last_name`, `user_name`, `user_email`, `user_password`, `user_show_pass`, `user_number`, `user_state`, `user_territory`, `user_city`, `user_role`, `user_status`, `user_code`, `user_date`) VALUES
-(1, 'Dnyanesh', 'M', 'admin', 'dnyanesh.mali@softinfology.com', '8adcb100cdf06ea1525a125786eca9b9', '', '9689483519', 'Maharashtra', '', 'Osmanabad', 'admin', '1', 'ASM/PUNE/2', '2017-03-15 00:00:00'),
-(7, 'santosh', 'B', 'santoshb', 'santoshbhosale123@gmail.com', 'accc9105df5383111407fd5b41255e23', '', '345454544545', 'Maharashtra', '', 'Pune', 'ASM', '1', 'ASM/PUNE/1', '2017-03-16 07:48:09'),
-(8, 'John', 'M', 'johnm', 'john@gmail.com', 'e358efa489f58062f10dd7316b65649e', '', '34343434', 'Uttar Pradesh', '', 'Kanpur', 'RSM', '0', 'RSM/KANPUR/1', '2017-03-16 08:00:16'),
-(9, 'Pitter', 'L', 'pitterl', 'pitter@gmail.com', '25d55ad283aa400af464c76d713c07ad', '', '4545454545544', 'Maharashtra', 'Kharghar', 'Mumbai', 'TSO', '1', 'TSO/MUMBAI/1', '2017-03-16 13:29:23'),
-(10, 'Mark', 'K', 'markk', 'mark@gmail.com', '1bbd886460827015e5d605ed44252251', '11111111', '343434343434', 'Bengal', 'Howrah', 'Kolkata', 'SE', '1', 'SE/KOLKATA/1', '2017-03-17 06:25:16'),
-(11, 'Matt', 'R', 'mattr', 'matt@gmail.com', 'bae5e3208a3c700e3db642b6631e95b9', '22222222', '324324424', 'Maharashtra', 'Sayan', 'Mumbai', 'RSM', '', 'RSM/MUMBAI/1', '2017-03-17 11:53:43'),
-(53, 'sdfsf', 'sdfsdf', 'sdfsfsdfsdf', 'sdfdfdfadfasd@dsfsdf.com', 'bbb8aae57c104cda40c93843ad5e6db8', '111111111', '34534', 'sdfsf', 'dfdf', 'sdfdsf', 'ASM', '0', 'ASM/SDFDSF/2', '2017-03-17 14:09:51'),
-(55, 'sdfsf', 'sdfsdf', 'sdfsfsdfsdf', 'sdfdfdfadfasd@dsfsdf.com', 'bbb8aae57c104cda40c93843ad5e6db8', '111111111', '34534', 'sdfsf', 'dfdf', 'sdfdsf', 'ASM', '0', 'ASM/SDFDSF/1', '2017-03-17 14:14:28'),
-(56, 'sdfsf', 'sdfsdf', 'sdfsfsdfsdf', 'sdfdfdfadfasd@dsfsdf.com', 'bbb8aae57c104cda40c93843ad5e6db8', '111111111', '34534', 'sdfsf', 'dfdf', 'sdfdsf', 'ASM', '0', 'ASM/SDFDSF/1', '2017-03-17 14:14:56'),
-(57, 'sdfsf', 'sdfsdf', 'sdfsfsdfsdf', 'sdfdfdfadfasd@dsfsdf.com', 'bbb8aae57c104cda40c93843ad5e6db8', '111111111', '34534', 'sdfsf', 'dfdf', 'sdfdsf', 'ASM', '0', 'ASM/SDFDSF/1', '2017-03-17 14:15:41'),
-(58, 'sdfsf', 'sdfsdf', 'sdfsfsdfsdf', 'sdfdfdfadfasd@dsfsdf.com', 'bbb8aae57c104cda40c93843ad5e6db8', '111111111', '34534', 'sdfsf', 'dfdf', 'Pune', 'ASM', '0', 'ASM/PUNE/1', '2017-03-17 14:17:10'),
-(59, 'sdfsf', 'sdfsdf', 'sdfsfsdfsdf', 'sdfdfdfadfasd@dsfsdf.com', 'bbb8aae57c104cda40c93843ad5e6db8', '111111111', '34534', 'sdfsf', 'dfdf', 'Pune', 'ASM', '0', 'ASM/PUNE/2', '2017-03-17 14:19:28'),
-(60, 'sdfsf', 'sdfsdf', 'sdfsfsdfsdf', 'sdfdfdfadfasd@dsfsdf.com', 'bbb8aae57c104cda40c93843ad5e6db8', '111111111', '34534', 'sdfsf', 'dfdf', 'Pune', 'ASM', '0', 'ASM/PUNE/3', '2017-03-17 14:19:49'),
-(61, 'testasm', 'p', 'testasmp', 'sdfadfasd@dsfsdfd.com', 'bbb8aae57c104cda40c93843ad5e6db8', '111111111', '343434343', 'sdfsdf', 'sdfsdf', 'Pune', 'RSM', '0', 'RSM/PUNE/1', '2017-03-17 14:21:28'),
-(62, 'testasm', 'p', 'testasmp', 'sdfadfasd@dsfsdfd.com', 'bbb8aae57c104cda40c93843ad5e6db8', '111111111', '343434343', 'sdfsdf', 'sdfsdf', 'Pune', 'ASM', '0', 'ASM/PUNE/2', '2017-03-17 14:21:43');
+insert  into `tbl_users`(`user_id`,`first_name`,`last_name`,`user_name`,`user_email`,`user_password`,`user_number`,`user_state`,`user_city`,`user_role`,`user_code`,`user_date`,`user_show_pass`,`user_territory`,`user_status`) values (1,'Dnyanesh','M','admin','dnyanesh.mali@softinfology.com','8adcb100cdf06ea1525a125786eca9b9','9689483519','Maharashtra','Osmanabad','admin','','2017-03-15 00:00:00','','',0),(2,'Swapnil','T','swapnilt','swapnil@softinfology.com','03c7c0ace395d80182db07ae2c30f034','3434334343','Maharashtra','Pune','RSM','RSM/Pune/001','2017-03-15 12:20:47','','',0),(10,'admin','se','adminse','admin@mail.com','e6e061838856bf47e1de730719fb2609','8600249455','pune','pune','SE','SE/PUNE/2','2017-03-18 06:29:33','admin@123','pune',0);
 
--- --------------------------------------------------------
+/*Table structure for table `users` */
 
---
--- Table structure for table `users`
---
+DROP TABLE IF EXISTS `users`;
 
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(100) DEFAULT NULL,
   `password` varchar(100) DEFAULT NULL,
-  `desigantion` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `desigantion` varchar(250) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `users`
---
+/*Data for the table `users` */
 
-INSERT INTO `users` (`id`, `username`, `password`, `desigantion`) VALUES
-(1, 'admin', '8adcb100cdf06ea1525a125786eca9b9', 'ADMIN');
+insert  into `users`(`id`,`username`,`password`,`desigantion`) values (1,'admin','8adcb100cdf06ea1525a125786eca9b9','ADMIN');
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `distributer_user`
---
-ALTER TABLE `distributer_user`
-  ADD PRIMARY KEY (`d_id`);
-
---
--- Indexes for table `sales_user`
---
-ALTER TABLE `sales_user`
-  ADD PRIMARY KEY (`s_id`);
-
---
--- Indexes for table `tbl_users`
---
-ALTER TABLE `tbl_users`
-  ADD PRIMARY KEY (`user_id`);
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `distributer_user`
---
-ALTER TABLE `distributer_user`
-  MODIFY `d_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
---
--- AUTO_INCREMENT for table `sales_user`
---
-ALTER TABLE `sales_user`
-  MODIFY `s_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT for table `tbl_users`
---
-ALTER TABLE `tbl_users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
