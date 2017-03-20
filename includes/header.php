@@ -13,10 +13,11 @@ if (!isset($_SESSION['uid']))
         <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen">
         <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet" media="screen">
         <link href="css/style.css" type="text/css" rel="stylesheet" media="screen">
+        <link href="css/sweetalert.css" type="text/css" rel="stylesheet" media="screen">
         <link href="css/jquery.dataTables.min.css" type="text/css" rel="stylesheet" media="screen">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
-    <body >
+    <body>
         <header id="header" class="page-topbar ">
             <div class="navbar-fixed">
                 <nav class="navbar-color">
@@ -149,7 +150,15 @@ if (!isset($_SESSION['uid']))
                                     </a>
 
                         </li>
-                           <li class="bold">
+                        <li class="bold">
+                           
+                                    <a href="orderlist.php"  class=" waves-effect waves-cyan">
+                                       
+                                        Order List
+                                    </a>
+
+                        </li>
+                      <!--     <li class="bold">
                            
                                     <a href="javascript:void(0)"  class=" waves-effect waves-cyan">
                                        
@@ -164,7 +173,7 @@ if (!isset($_SESSION['uid']))
                                        Distributor appointment  form
                                     </a>
                          
-                        </li>
+                        </li> -->
                         <li class="bold">
                             <a href="javascript:void(0)" class="waves-effect waves-cyan">
                              

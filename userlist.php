@@ -176,11 +176,21 @@ $('select').material_select();
 
          function deleteuser(id)
             {
-                alert(id);
+
+                //alert(id);
                 var deleteuser_id = id;
-            if (confirm('Sure to Delete ?'))
-                    {
-                        $.ajax({
+                 swal({
+                          title: "Are you sure?",
+                          text: "Your will not be able to recover this imaginary file!",
+                          type: "warning",
+                          showCancelButton: true,
+                          confirmButtonClass: "btn-danger",
+                          confirmButtonText: "Yes, delete it!",
+                          closeOnConfirm: true
+                        },
+                        function(){
+
+                            $.ajax({
                         type: "POST",
                         url: "action_status.php",
                         data:{"duser_id":deleteuser_id},
@@ -193,13 +203,45 @@ $('select').material_select();
 
                             }
                         });
-                    }
-                }
 
+
+    })
+}
+                
+        
                 function dstatus(id){
                    //alert(id);
                 var user_id = id;
-            if (confirm('Sure to Deactivate ?'))
+
+                swal({
+                          title: "Are you sure?",
+                          text: "Your will not be able to recover this imaginary file!",
+                          type: "warning",
+                          showCancelButton: true,
+                          confirmButtonClass: "btn-danger",
+                          confirmButtonText: "Yes, Deactivate it!",
+                          closeOnConfirm: true
+                        },
+                           function(){
+
+                            $.ajax({
+                        type: "POST",
+                        url: "action_status.php",
+                        data:{"dauser_id":user_id},
+                        datatype: "json",
+                        success: function(response)
+                        {
+                                console.log(response);
+                                location.reload();
+
+                            }
+                        });
+
+
+    })
+}
+
+       /*     if (confirm('Sure to Deactivate ?'))
                     {
                         $.ajax({
                         type: "POST",
@@ -211,17 +253,45 @@ $('select').material_select();
                                 console.log(response);
                                 location.reload();
 
-
                             }
                         });
                     }
 
-                }
+                } */
 
                 function astatus(id){
                    //alert(id);
                 var user_id = id;
-            if (confirm('Sure to Active ?'))
+
+                swal({
+                          title: "Are you sure?",
+                          text: "Your will not be able to recover this imaginary file!",
+                          type: "warning",
+                          showCancelButton: true,
+                          confirmButtonClass: "btn-danger",
+                          confirmButtonText: "Yes, Activate it!",
+                          closeOnConfirm: true
+                        },
+                        function(){
+
+                            $.ajax({
+                        type: "POST",
+                        url: "action_status.php",
+                        data:{"asuser_id":user_id},
+                        datatype: "json",
+                        success: function(response)
+                        {
+                                console.log(response);
+                                location.reload();
+
+
+                            }
+                        });
+
+
+    })
+                }
+         /*   if (confirm('Sure to Active ?'))
                     {
                         $.ajax({
                         type: "POST",
@@ -236,9 +306,9 @@ $('select').material_select();
 
                             }
                         });
-                    }
+                    }  */
 
-                }
+                
 
 
         </script>

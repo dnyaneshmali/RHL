@@ -12,16 +12,16 @@ $query1 = "select max(user_id) as max, user_code from tbl_users where user_role 
     if($result){
         
         $row = mysqli_fetch_array($result);
-        echo $maxid = $row['max']; 
-        echo $ucode = $row['user_code'];   
+         $maxid = $row['max']; 
+         $ucode = $row['user_code'];   
 
     }
 
  $next_id = substr($ucode, strrpos($ucode, '/') + 1);
- echo 'nid'.$next_id;
+ //echo 'nid'.$next_id;
 
  $next_one = $next_id +1;
-echo 'none'.$next_one;
+//echo 'none'.$next_one;
 
 $fname = $_POST['fname'];
 $lname = $_POST['lname'];
@@ -43,7 +43,7 @@ $query = "insert into tbl_users (first_name,last_name,user_name,user_email,user_
 
 	if(!mysqli_query($con,$query))
     {
-        die('Error : '.mysqli_error());
+        die('Error :'.mysqli_error());
         echo"0";
     }else{
       echo"1";

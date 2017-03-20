@@ -14,6 +14,7 @@
         <script type="text/javascript" src="js/validation/jquery.validate.min.js"></script>
         <script type="text/javascript" src="js/validation/additional-methods.min.js"></script>
         <script type="text/javascript" src="js/jquery.form.min.js"></script>
+        <script type="text/javascript" src="js/sweetalert.min.js"></script>
         <script>
              $(document).ready(function() {
                 var today = new Date();

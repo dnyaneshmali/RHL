@@ -214,12 +214,22 @@ $('select').material_select();
                         url: "add_user.php",
                         success: function(data) {
                         	console.log(data);
-                        	  if (data === '1') {
-
-                                alert('Success');
+                        	  if (data == '1') {
+                                swal(
+                                      'Good job!',
+                                      'You clicked the button!',
+                                      'success'
+                                    )
+                                //alert('Success');
                                 //$('#adduserform').clearForm();
                             } else {
-                                alert('Fail');
+
+                                swal(
+                                      'Oops...',
+                                      'Something went wrong!',
+                                      'error'
+                                    )
+                                //alert('Fail');
                                 //$('#adduserform').clearForm();
                             }
                         },
@@ -229,7 +239,6 @@ $('select').material_select();
                         }
                     });
                 }
-
             });
             });
  </script>
