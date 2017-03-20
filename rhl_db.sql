@@ -59,7 +59,7 @@ CREATE TABLE `distributer_user` (
   `ddate` varchar(100) DEFAULT NULL,
   `dtime` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`d_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 /*Data for the table `distributer_user` */
 
@@ -86,7 +86,7 @@ CREATE TABLE `emp_dsr` (
   `emp_ordamt` varchar(250) DEFAULT NULL,
   `emp_trdrmk` varchar(250) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 /*Data for the table `emp_dsr` */
 
@@ -218,7 +218,7 @@ CREATE TABLE `sur_user` (
 
 /*Data for the table `sur_user` */
 
-insert  into `sur_user`(`id`,`name`,`address`,`state`,`retail_no`,`employe_no`,`scheme`,`advert`) values (1,'fgf','fdgfg','fgdgdg',5,56,'on,on,','on,on,'),(2,'prashant','pune','maharstra',85,25,'coupons,,','coupons,,'),(3,'harsh','khradi','maharastar',50,88,'extra qty,luckey draw,scrach card,','extra qty,luckey draw,scrach card,'),(4,'gfdg','gfdgfd','gfdg',5,564,'coupons,priceoff,','coupons,priceoff,'),(5,'fvbvcb','vcbvcb','vcbcbvcv',65,654654654,'luckey draw,scrach card,','luckey draw,scrach card,'),(6,'fdgdg','fdgfdg','fgfdgf',5,5,'luckey draw,scrach card,','luckey draw,scrach card,'),(7,'fdgdg','fdgfdg','fgfdgf',5,5,'luckey draw,scrach card,','luckey draw,scrach card,'),(8,'shriram','ayodhya','ayodhya',12000,2155,'coupons,','coupons,'),(14,'fgdg','fdgdgdf','fdgfdgfd',7,7,'extra qty,luckey draw,','TV,Pamphlets,'),(15,'fgdg','fgdg','fdgdg',887,87878,'coupons,priceoff,','TV,News,'),(16,'hgfhf','gfhgfh','ghgfhgf',78,65,'extra qty,','TV,'),(17,'hjgj','hjhgjhg','jhgjhg',55,555,'coupons,','Mouth Publicity,'),(18,'gfdg','fdgfdg','fgdg',455,454,'coupons,','TV,'),(19,'gfhfh','gfhgfh','gfhgfh',545,54,'coupons,','Mouth Publicity,'),(20,'shri','bharat','bhrat',100000,1222222,'luckey draw,','TV,'),(21,'prashant','puine','dgh',65,55,'luckey draw,','TV,');
+insert  into `sur_user`(`id`,`name`,`address`,`state`,`retail_no`,`employe_no`,`scheme`,`advert`) values (20,'shri','bharat','bhrat',100000,1222222,'luckey draw,','TV,'),(21,'prashant','puine','dgh',65,55,'luckey draw,','TV,');
 
 /*Table structure for table `tbl_users` */
 

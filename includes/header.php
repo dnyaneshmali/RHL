@@ -120,7 +120,7 @@ if (!isset($_SESSION['uid']))
                         </li>
                          <li class="bold">
                            
-                                    <a href="javascript:void(0)"  class=" waves-effect waves-cyan">
+                                    <a href="dsr_list.php"  class=" waves-effect waves-cyan">
                                         Reporting
                                     </a>
                      
@@ -143,9 +143,9 @@ if (!isset($_SESSION['uid']))
                         </li>
                          <li class="bold">
                            
-                                    <a href="dsr_list.php"  class=" waves-effect waves-cyan">
+                                    <a href="survey_list.php"  class=" waves-effect waves-cyan">
                                        
-                                        Sales Summery
+                                        Survey List
                                     </a>
 
                         </li>
