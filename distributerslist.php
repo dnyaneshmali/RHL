@@ -48,6 +48,7 @@ and open the template in the editor.
                                                                 <th data-field="Email">Email </th>
                                                                 <th data-field="Address">Address </th>
                                                                 <th data-field="price">SE Location </th>
+                                                                <th data-field="price">Added By</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -87,7 +88,7 @@ and open the template in the editor.
                     var trHTML = '';
                    for(var i=0; i<count; i++){
 
-                    trHTML += '<tr><td>' + i+ '</td><td>' + response.date[i]+ '</td><td>' + response.time[i]+ '</td><td>' + response.name[i]+ '</td><td>' + response.contact[i]+ '</td><td>' + response.email[i]+ '</td><td>' + response.location[i]+ '</td><td>' + response.selocation[i]+ '</td></tr>'
+                    trHTML += '<tr><td>' + i+ '</td><td>' + response.date[i]+ '</td><td>' + response.time[i]+ '</td><td>' + response.name[i]+ '</td><td>' + response.contact[i]+ '</td><td>' + response.email[i]+ '</td><td>' + response.location[i]+ '</td><td>' + response.selocation[i]+ '</td><td>' + response.uname[i]+ '</td></tr>'
                  }
                     // $.each(json, function(i, item) {
 

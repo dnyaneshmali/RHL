@@ -17,6 +17,7 @@ $con = mysqli_connect(DB_SERVER,DB_USER,DB_PASS,DB_NAME) or
  $lang =  isset($_REQUEST['lang'])?$_REQUEST['lang']:"";
  $ddate =  isset($_REQUEST['date'])?$_REQUEST['date']:"";
  $dtime =  isset($_REQUEST['time'])?$_REQUEST['time']:"";
+  $uname =  isset($_REQUEST['username'])?$_REQUEST['username']:"";
 $geolocation = $lat.','.$lang;
 $request = 'http://maps.googleapis.com/maps/api/geocode/json?latlng='.$geolocation.'&sensor=false'; 
 $file_contents = file_get_contents($request);
@@ -32,7 +33,7 @@ if(isset($json_decode->results[0])) {
    $GLOBALS['seloca'] = $response[0];
 
 }
- $query="INSERT INTO distributer_user(d_name,d_location,d_contact,d_email,selocation,ddate,dtime)values('$name','$location','$contact','$email','$seloca','$ddate','$dtime')";
+ $query="INSERT INTO distributer_user(d_name,d_location,d_contact,d_email,selocation,ddate,dtime,username)values('$name','$location','$contact','$email','$seloca','$ddate','$dtime','$uname')";
  
  $rs=  mysqli_query($con, $query);
  

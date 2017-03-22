@@ -35,6 +35,7 @@ while ($row = mysqli_fetch_array($rs))
     $seloc[$i]=$row['selocation'];
     $date[$i]=$row['ddate'];
     $time[$i]=$row['dtime'];
+    $uname[$i]=$row['username'];
     $i++;
 }
 
@@ -46,7 +47,8 @@ $out=  json_encode(array(
     'email'=>$email,
     'selocation'=>$seloc,
     'date'=>$date,
-    'time'=>$time
+    'time'=>$time,
+    'uname'=>$uname
     
 ));
 
