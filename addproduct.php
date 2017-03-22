@@ -12,7 +12,8 @@ $pname = $_POST['pname'];
 $pprice = $_POST['pprice'];
 $pqty = $_POST['pqty'];
 $desc = $_POST['desc'];
-$product_date = date("Y-m-d H:i:s");
+date_default_timezone_set('Asia/Kolkata');
+$product_date = date("Y-m-d g:i a");
 $query = "insert into tbl_products(product_name,product_price,product_quantity,product_desc,product_date) values ('".$pname."','".$pprice."','".$pqty."','".$desc."','".$product_date."')";
 
 	if(!mysqli_query($con,$query))
