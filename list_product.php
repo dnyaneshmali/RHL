@@ -16,11 +16,11 @@ and open the template in the editor.
                         <div class="container">
                             <div class="row">
                                 <div class="col s12 m12 l12">
-                                    <h5 class="breadcrumbs-title">Daily Report List </h5>
+                                    <h5 class="breadcrumbs-title">Product List </h5>
                                     <ol class="breadcrumbs">
                                         <li><a href="home.php">Dashboard</a>
                                         </li>
-                                        <li><a href="#">Daily Report List </a>
+                                        <li><a href="#">Product List </a>
                                         </li>
                                     </ol>
                                 </div>
@@ -29,7 +29,7 @@ and open the template in the editor.
                     </div>
                     <div class="container">
                         <div class="section">
-                            <p class="caption">List Of Daily Sales Report.</p>
+                            <p class="caption">List Of Product</p>
                             <div class="divider"></div>
                             <div class="row">
                                 <div class="col s12 m12 l12">
@@ -40,21 +40,12 @@ and open the template in the editor.
                                                     <table class="bordered" id="dsr-table" class="display nowrap">
                                                         <thead>
                                                             <tr>
-                                                            <th data-field="id">ID </th>
-                                                            <th data-field="Date">Name </th>
-                                                            <th data-field="Time">Designation </th>
-                                                                <th data-field="Name">Teritary </th>
-                                                                <th data-field="price">Head Qtr </th>
-                                                                <th data-field="Email">state </th>
-                                                                <th data-field="Address">Date </th>
-                                                                <th data-field="price">WorkWith</th>
-                                                                <th data-field="Email">Trade Name </th>
-                                                                <th data-field="Address">Trade Contact</th>
-                                                                <th data-field="price">Trade Address</th>
-                                                                <th data-field="Email">Visit Purpose</th>
-                                                                <th data-field="Address">Order</th>
-                                                                <th data-field="price">Order Amt</th>
-                                                                <th data-field="price">Remark</th>
+                                                            <th data-field="id">Sr No </th>
+                                                            <th data-field="name">Product Name </th>
+                                                            <th data-field="price">Product Price </th>
+                                                            <th data-field="qt">Product Quantity </th>
+                                                             <th data-field="desc">Description </th>
+                                                             <th data-field="desc">Date </th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -79,22 +70,21 @@ and open the template in the editor.
         <script>
             $(document).ready(function(){
              
-                var idlist="-1";  
+                //var idlist="-1";  
             
                 $.ajax({
                 type: "POST",
-                url: "http://localhost/RHL/dsrlist.php",
-                data:{"idlist":idlist},
+                url: "http://localhost/RHL/productlist.php",
                 datatype: "json",
                 success: function(response, testStatus, jqXHR)
                 {
-                    console.log(response);
-                    var count = Object.keys(response.id).length;
-                     console.log(count);
+                    var json = JSON.parse(response);
+                         //console.log(json); 
+                    var count = json.length;
                     var trHTML = '';
                    for(var i=0; i<count; i++){
 
-                    trHTML += '<tr><td>' + i+ '</td><td>' + response.name[i]+ '</td><td>' + response.design[i]+ '</td><td>' + response.terit[i]+ '</td><td>' + response.headqtr[i]+ '</td><td>' + response.state[i]+ '</td><td>' + response.date[i]+ '</td><td>' + response.workwith[i]+ '</td><td>' + response.tradename[i]+ '</td><td>' + response.trdcon[i]+ '</td><td>' + response.trdadd[i]+ '</td><td>' + response.purvisit[i]+ '</td><td>' + response.orderb[i]+ '</td><td>' + response.ordamt[i]+ '</td><td>' + response.trdrmk[i]+ '</td></tr>';
+                    trHTML += '<tr><td>' + i+ '</td><td>' + json[i].product_name+ '</td><td>' + json[i].product_price+ '</td><td>' + json[i].product_quantity+ '</td><td>' + json[i].product_desc+ '</td><td>' + json[i].product_date+ '</td>';
                  }
                     // $.each(json, function(i, item) {
 

@@ -174,13 +174,20 @@ if (!isset($_SESSION['uid']))
                                     </a>
                          
                         </li> -->
-                        <li class="bold">
-                            <a href="javascript:void(0)" class="waves-effect waves-cyan">
-                             
-                                Product range
 
-                            </a>
-                        </li>
+                        <ul class="collapsible collapsible-accordion">
+                                  <li class="bold">
+                                    <a  class="collapsible-header waves-effect waves-cyan">
+                                        Manage Product
+                                    </a>
+                                        <div class="collapsible-body" >
+                                        <ul>
+                                            <li><a href="add_product.php">Add Product</a></li>
+                                            <li><a href="list_product.php">List of Product</a></li>
+                                        </ul>
+                                    </div>
+                                  </li>
+                              </ul>
                           <li class="bold">
                             <a href="javascript:void(0)" class="waves-effect waves-cyan">
                              

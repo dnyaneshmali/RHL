@@ -16,11 +16,11 @@ and open the template in the editor.
                         <div class="container">
                             <div class="row">
                                 <div class="col s12 m12 l12">
-                                    <h5 class="breadcrumbs-title">RSM List </h5>
+                                    <h5 class="breadcrumbs-title">User List </h5>
                                     <ol class="breadcrumbs">
                                         <li><a href="home.php">Dashboard</a>
                                         </li>
-                                        <li><a href="#">RSM List </a>
+                                        <li><a href="#">User List </a>
                                         </li>
                                     </ol>
                                 </div>
@@ -29,7 +29,7 @@ and open the template in the editor.
                     </div>
                     <div class="container">
                         <div class="section">
-                            <p class="caption">List Of All Registered RSM.</p>
+                            <p class="caption">List Of All User</p>
                             <div class="divider"></div>
                             <div class="row">
                                 <div class="col s12 m12 l12">

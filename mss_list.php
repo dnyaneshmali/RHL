@@ -16,11 +16,11 @@ and open the template in the editor.
                         <div class="container">
                             <div class="row">
                                 <div class="col s12 m12 l12">
-                                    <h5 class="breadcrumbs-title">Distributers List </h5>
+                                    <h5 class="breadcrumbs-title">MSS List </h5>
                                     <ol class="breadcrumbs">
                                         <li><a href="home.php">Dashboard</a>
                                         </li>
-                                        <li><a href="#">Distributers List </a>
+                                        <li><a href="#">MSS List </a>
                                         </li>
                                     </ol>
                                 </div>
