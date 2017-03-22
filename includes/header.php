@@ -84,7 +84,7 @@ if (!isset($_SESSION['uid']))
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="index.php">
+                                            <a href="logout.php">
                                                 <i class="mdi-action-lock-outline"></i>
                                                 Logout
                                             </a>
