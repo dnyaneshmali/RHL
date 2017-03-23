@@ -31,13 +31,9 @@ $order_id = mysqli_insert_id($con);
      }
  
 
-$rs = mysqli_query($con, $query);
-if ($rs == 1) {
+
 
     echo "OK";
-} else {
-    echo "somthing went wrong";
-}
 
 
  
