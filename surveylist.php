@@ -16,7 +16,7 @@ $con = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME) or
 
 
 
-$query = "SELECT sur.id AS sid,sur.name AS sname,sur.address AS saddress, sur.state AS state, sur.retail_no AS retailno, sur.employe_no AS empno,sur.scheme AS scheme,sur.advert AS advert, sp.br_hrproduct AS brhprod,sp.lo_hrproduct AS lohprod,sp.br_skproduct AS bskprod,sp.lo_skproduct AS lskprod ,sp.br_pordpercnt AS brpercnt,sp.lo_pordpercnt AS lopercnt FROM sur_user AS sur LEFT JOIN sur_product AS sp ON  sp.suser_id = sur.id ";
+$query = "SELECT sur.id AS sid,sur.name AS sname,sur.address AS saddress, sur.state AS state, sur.retail_no AS retailno, sur.employe_no AS empno,sur.scheme AS scheme,sur.advert AS advert, sp.br_hrproduct AS brhprod,sp.lo_hrproduct AS lohprod,sp.br_skproduct AS bskprod,sp.lo_skproduct AS lskprod ,sp.br_pordpercnt AS brpercnt,sp.lo_pordpercnt AS lopercnt,sp.s_datetime AS sdate FROM sur_user AS sur LEFT JOIN sur_product AS sp ON  sp.suser_id = sur.id ";
 $rs = mysqli_query($con, $query);
 $sid = array();
 $sname = array();
@@ -32,7 +32,7 @@ $bskprod = array();
 $lskprod = array();
 $brpercnt = array();
 $lopercnt = array();
-
+$sur_date = array();
 
 $i = 0;
 while ($row = mysqli_fetch_array($rs)) {
@@ -51,6 +51,7 @@ while ($row = mysqli_fetch_array($rs)) {
     $lskprod[$i] = $row['lskprod'];
     $brpercnt[$i] = $row['brpercnt'];
     $lopercnt[$i] = $row['lopercnt'];
+    $sur_date[$i] = $row['sdate'];
 
     $i++;
 }
@@ -69,7 +70,8 @@ $out = json_encode(array(
     'bskprod' => $bskprod,
     'lskprod' => $lskprod,
     'brpercnt' => $brpercnt,
-    'lopercnt' => $lopercnt
+    'lopercnt' => $lopercnt,
+    'sur_date' => $sur_date
 
         ));
 

@@ -54,6 +54,7 @@ and open the template in the editor.
                                                                 <th data-field="Address">Local Skin Product</th>
                                                                 <th data-field="price">Brand percent</th>
                                                                 <th data-field="price">Local percent</th>
+                                                                <th data-field="price">Date & Time</th>
                                              
                                                             </tr>
                                                         </thead>
@@ -94,7 +95,7 @@ and open the template in the editor.
                     var trHTML = '';
                    for(var i=0; i<count; i++){
 
-                    trHTML += '<tr><td>' + i+ '</td><td>' + response.sname[i]+ '</td><td>' + response.saddress[i]+ '</td><td>' + response.state[i]+ '</td><td>' + response.retailno[i]+ '</td><td>' + response.empno[i]+ '</td><td>' + response.scheme[i]+ '</td><td>' + response.advert[i]+ '</td><td>' + response.brhprod[i]+ '</td><td>' + response.lohprod[i]+ '</td><td>' + response.bskprod[i]+ '</td><td>' + response.lskprod[i]+ '</td><td>' + response.brpercnt[i]+ '</td><td>' + response.lopercnt[i]+ '</td>';
+                    trHTML += '<tr><td>' + i+ '</td><td>' + response.sname[i]+ '</td><td>' + response.saddress[i]+ '</td><td>' + response.state[i]+ '</td><td>' + response.retailno[i]+ '</td><td>' + response.empno[i]+ '</td><td>' + response.scheme[i]+ '</td><td>' + response.advert[i]+ '</td><td>' + response.brhprod[i]+ '</td><td>' + response.lohprod[i]+ '</td><td>' + response.bskprod[i]+ '</td><td>' + response.lskprod[i]+ '</td><td>' + response.brpercnt[i]+ '</td><td>' + response.lopercnt[i]+ '</td><td>' + response.sur_date[i]+ '</td>';
                  }
                     // $.each(json, function(i, item) {
 

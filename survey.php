@@ -21,7 +21,8 @@ $s_sbp = $_POST['sbrp'];
 $s_slp = $_POST['slrp'];
 $s_bpsale = $_POST['brsale'];
 $s_lpsale = $_POST['lcsale'];
-
+date_default_timezone_set('Asia/Kolkata');
+$survey_date = date("Y-m-d g:i a");
 
 $sche = "";
 $advrt = "";
@@ -54,8 +55,8 @@ foreach ($s_slp as $slp1) {
     $slp .= $slp1 . ",";
 }
 
-$query1 = "insert into sur_product (br_hrproduct,lo_hrproduct,br_skproduct,lo_skproduct,br_pordpercnt,lo_pordpercnt,suser_id) values"
-        . "('$hbp','$hlp','$sbp','$slp','$s_bpsale','$s_lpsale','$last_id')"
+$query1 = "insert into sur_product(br_hrproduct,lo_hrproduct,br_skproduct,lo_skproduct,br_pordpercnt,lo_pordpercnt,suser_id,s_datetime) values"
+        . "('$hbp','$hlp','$sbp','$slp','$s_bpsale','$s_lpsale','$last_id','$survey_date')"
         . "";
 $rs1 = mysqli_query($con, $query1);
 if ($rs1 == 1) {
