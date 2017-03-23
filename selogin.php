@@ -14,7 +14,7 @@ $password = isset($_REQUEST['password']) ? $_REQUEST['password'] : "";
 $designation = isset($_REQUEST['designation']) ? $_REQUEST['designation'] : "";
 
 
-$query = "SELECT user_name, user_role  FROM tbl_users where user_name = '$name' and user_show_pass = " . "'$password'" . " and user_role = '$designation' limit 1 ";
+$query = "SELECT user_name, user_role  FROM tbl_users where user_name = '$name' and user_show_pass = " . "'$password'" . " and user_role = '$designation' and user_status = 1 limit 1 ";
 
 $rs = mysqli_query($con, $query);
 
