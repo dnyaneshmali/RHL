@@ -16,7 +16,8 @@ $con = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME) or
 
 $id_list = isset($_POST['idlist'])?$_POST['idlist']:"-1";
 
-$query = "SELECT * FROM orders WHERE id NOT IN($id_list)";
+//$query = "SELECT * FROM orders WHERE id NOT IN($id_list)";
+$query = "select orders.*, order_product.product from orders INNER JOIN order_product on orders.id = order_product.order_id";
 $rs = mysqli_query($con, $query);
 $id=array();
 $emp_name=array();
@@ -41,6 +42,7 @@ while ($row = mysqli_fetch_array($rs))
     $emp_design[$i]=$row['tso_name'];
     $emp_terit[$i]=$row['contact'];
     $emp_headqtr[$i]=$row['pay_method'];
+    $pname[$i]=$row['product'];
     $i++;
 }
 
@@ -59,7 +61,8 @@ $out=  json_encode(array(
     'purvisit'=>$emp_purvisit,
     'orderb'=>$emp_orderb,
     'ordamt'=>$emp_ordamt,
-    'trdrmk'=>$emp_trdrmk
+    'trdrmk'=>$emp_trdrmk,
+    'pname'=>$pname
     
     
 ));

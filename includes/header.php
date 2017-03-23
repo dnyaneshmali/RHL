@@ -129,7 +129,14 @@ if (!isset($_SESSION['uid']))
                         
                        <li class="bold ">
                             <a href="distributerslist.php" class="waves-effect waves-cyan">
-                                List Distributers
+                                List Distributers Enquiry
+
+                            </a>
+                        </li>
+
+                       <li class="bold ">
+                            <a href="distributersdtls.php" class="waves-effect waves-cyan">
+                                List Distributers Details
 
                             </a>
                         </li>

@@ -94,3 +94,33 @@ $rs =  mysqli_query($con, $query);
 
 }
 
+
+
+$product_id=  isset($_REQUEST['pid'])?$_REQUEST['pid']:"";
+//$role = 'RSM';
+ //echo $dauser_id;
+ 
+if(isset($product_id)){
+    //echo $dauser_id;
+$query = "delete from tbl_products where product_id = '".$product_id."'";
+
+$rs =  mysqli_query($con, $query);
+ 
+ if(!$rs)
+    {
+
+        die('Error :'.mysqli_error()); 
+        echo"0"; 
+    }
+    else{
+      
+        echo"1";
+
+    }
+//echo json_encode($data);
+ //print_r($data);
+
+}
+
+
+

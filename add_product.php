@@ -41,28 +41,28 @@ and open the template in the editor.
 
 		<div class="row margin">
           <div class="input-field col s12">
-            <i class="mdi-social-person-outline prefix"></i>
+            <i class="mdi-action-view-module prefix"></i>
             <input id="pname" name="pname" type="text">
             <label for="pname" class="center-align">Product Name</label>
           </div>
           </div>
           <div class="row margin">
           <div class="input-field col s12">
-            <i class="mdi-social-person-outline prefix"></i>
+            <i class="mdi-editor-attach-money prefix"></i>
             <input id="pprice" name="pprice" type="text">
             <label for="pprice"  class="center-align">Price</label>
           </div>
           </div>
           <div class="row margin">
           <div class="input-field col s12">
-            <i class="mdi-social-person-outline prefix"></i>
+            <i class="mdi-action-subject prefix"></i>
             <input id="pqty" name="pqty" type="text">
             <label for="pqty" class="center-align">Quantity</label>
           </div>
         </div>
       <div class="row margin">
         <div class="input-field col s12">
-        <i class="mdi-social-person-outline prefix"></i>
+        <i class="mdi-communication-comment prefix"></i>
           <textarea id="desc" class="materialize-textarea" name="desc"></textarea>
             <label for="desc">Description</label>
         </div>
@@ -103,9 +103,11 @@ $('select').material_select();
                     },
                     pprice: {
                         required: true,
+                        number: true
                     },
                      pqty: {
                         required: true,
+                        number: true
                     },
                     desc: {
                         required: true,
@@ -153,7 +155,7 @@ $('select').material_select();
                                       'error'
                                     )
                                 //alert('Fail');
-                                //$('#adduserform').clearForm();
+                                $('#addproductform').clearForm();
                             }
                         },
                         error: function() {

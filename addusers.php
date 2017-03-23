@@ -55,7 +55,7 @@ and open the template in the editor.
           </div>
           <div class="row margin">
           <div class="input-field col s12">
-            <i class="mdi-social-person-outline prefix"></i>
+            <i class="mdi-communication-email prefix"></i>
             <input id="email" name="email" type="text">
             <label for="email"  class="center-align">Email</label>
           </div>
@@ -75,14 +75,14 @@ and open the template in the editor.
 
 		  <div class="row margin">
           <div class="input-field col s12">
-            <i class="mdi-social-person-outline prefix"></i>
+            <i class="mdi-action-settings-phone prefix"></i>
             <input id="mnumber" name="mnumber" type="text">
             <label for="mnumber" class="center-align">Number</label>
           </div>
           </div>
           <div class="row margin">
           <div class="input-field col s12">
-            <i class="mdi-social-person-outline prefix"></i>
+            <i class="mdi-social-location-city prefix"></i>
             <input id="city" name="city" type="text">
             <label for="city" class="center-align">City</label>
           </div>
@@ -90,7 +90,7 @@ and open the template in the editor.
 
           <div class="row margin">
           <div class="input-field col s12">
-            <i class="mdi-social-person-outline prefix"></i>
+            <i class="mdi-action-aspect-ratio prefix"></i>
             <input id="territory" name="territory" type="text">
             <label for="territory" class="center-align">Territory</label>
           </div>
@@ -98,7 +98,7 @@ and open the template in the editor.
 
           <div class="row margin">
           <div class="input-field col s12">
-            <i class="mdi-social-person-outline prefix"></i>
+            <i class="mdi-action-dashboard prefix"></i>
             <input id="state" name="state" type="text">
             <label for="state" class="center-align">State</label>
           </div>
@@ -230,7 +230,7 @@ $('select').material_select();
                                       'error'
                                     )
                                 //alert('Fail');
-                                //$('#adduserform').clearForm();
+                                $('#adduserform').clearForm();
                             }
                         },
                         error: function() {
