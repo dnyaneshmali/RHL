@@ -16,11 +16,11 @@ and open the template in the editor.
                         <div class="container">
                             <div class="row">
                                 <div class="col s12 m12 l12">
-                                    <h5 class="breadcrumbs-title">Distributers Enquiry List </h5>
+                                    <h5 class="breadcrumbs-title">Distributors Enquiry List </h5>
                                     <ol class="breadcrumbs">
                                         <li><a href="home.php">Dashboard</a>
                                         </li>
-                                        <li><a href="#">Distributers Enquiry List </a>
+                                        <li><a href="#">Distributors Enquiry List </a>
                                         </li>
                                     </ol>
                                 </div>
@@ -29,7 +29,7 @@ and open the template in the editor.
                     </div>
                     <div class="container">
                         <div class="section">
-                            <p class="caption">List Of All Distributers Enquiry</p>
+                            <p class="caption">List Of All Distributors Enquiry</p>
                             <div class="divider"></div>
                             <div class="row">
                                 <div class="col s12 m12 l12">
@@ -37,7 +37,7 @@ and open the template in the editor.
                                         <div id="table-wrap">
                                             <div class="row">
                                                 <div class="col s12 m12 l12">
-                                                    <table class="bordered" id="duser-table">
+                                                    <table class="display nowrap" id="duser-table">
                                                         <thead>
                                                             <tr>
                                                             <th data-field="id">ID </th>
@@ -88,14 +88,17 @@ and open the template in the editor.
                     var trHTML = '';
                    for(var i=0; i<count; i++){
 
-                    trHTML += '<tr><td>' + i+ '</td><td>' + response.date[i]+ '</td><td>' + response.time[i]+ '</td><td>' + response.name[i]+ '</td><td>' + response.contact[i]+ '</td><td>' + response.email[i]+ '</td><td>' + response.location[i]+ '</td><td>' + response.selocation[i]+ '</td><td>' + response.uname[i]+ '</td></tr>'
+                    trHTML += '<tr><td>' + response.id[i]+ '</td><td>' + response.date[i]+ '</td><td>' + response.time[i]+ '</td><td>' + response.name[i]+ '</td><td>' + response.contact[i]+ '</td><td>' + response.email[i]+ '</td><td>' + response.location[i]+ '</td><td>' + response.selocation[i]+ '</td><td>' + response.uname[i]+ '</td></tr>'
                  }
                     // $.each(json, function(i, item) {
 
                     //     trHTML += '<tr><td>' + response.id[i]+ '</td></tr>';
                     // });
                     $("#duser-table tbody").append(trHTML);
-                      $("#duser-table").DataTable();
+                    $("#duser-table").DataTable({
+                          "scrollX": true
+                      });
+                    
                 },
                 error: function(response, testStatus, jqXHR)
                 {

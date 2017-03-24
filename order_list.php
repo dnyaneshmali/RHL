@@ -17,7 +17,7 @@ $con = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME) or
 $id_list = isset($_POST['idlist'])?$_POST['idlist']:"-1";
 
 //$query = "SELECT * FROM orders WHERE id NOT IN($id_list)";
-$query = "select orders.*, order_product.product from orders INNER JOIN order_product on orders.id = order_product.order_id";
+$query = "select orders.*, order_product.* from orders INNER JOIN order_product on orders.id = order_product.order_id";
 $rs = mysqli_query($con, $query);
 $id=array();
 $emp_name=array();
@@ -34,6 +34,15 @@ $emp_purvisit=array();
 $emp_orderb=array();
 $emp_ordamt=array();
 $emp_trdrmk=array();
+
+$pname=array();
+$p_grams=array();
+$qty_case=array();
+$pcasevalue=array();
+$tcase=array();
+$tamount=array();
+
+
 $i=0;
 while ($row = mysqli_fetch_array($rs))
 {
@@ -43,6 +52,11 @@ while ($row = mysqli_fetch_array($rs))
     $emp_terit[$i]=$row['contact'];
     $emp_headqtr[$i]=$row['pay_method'];
     $pname[$i]=$row['product'];
+    $p_grams[$i]=$row['grams'];
+    $qty_case[$i]=$row['qunt_case'];
+    $pcasevalue[$i]=$row['percval'];
+    $tcase[$i]=$row['tocase'];
+    $tamount[$i]=$row['toamt'];
     $i++;
 }
 
@@ -62,7 +76,12 @@ $out=  json_encode(array(
     'orderb'=>$emp_orderb,
     'ordamt'=>$emp_ordamt,
     'trdrmk'=>$emp_trdrmk,
-    'pname'=>$pname
+    'pname'=>$pname,
+    'p_grams'=>$p_grams,
+    'qty_case'=>$qty_case,
+    'pcasevalue'=>$pcasevalue,
+    'tcase'=>$tcase,
+    'tamount'=>$tamount,
     
     
 ));

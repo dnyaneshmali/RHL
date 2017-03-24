@@ -37,7 +37,7 @@ and open the template in the editor.
                                         <div id="table-wrap">
                                             <div class="row">
                                                 <div class="col s12 m12 l12">
-                                                    <table class="bordered" id="dsr-table" class="display nowrap">
+                                                    <table class="display nowrap" id="dsr-table" class="display nowrap">
                                                         <thead>
                                                             <tr>
                                                             <th data-field="id">ID </th>
@@ -94,7 +94,7 @@ and open the template in the editor.
                     var trHTML = '';
                    for(var i=0; i<count; i++){
 
-                    trHTML += '<tr><td>' + i+ '</td><td>' + response.name[i]+ '</td><td>' + response.design[i]+ '</td><td>' + response.terit[i]+ '</td><td>' + response.headqtr[i]+ '</td><td>' + response.state[i]+ '</td><td>' + response.date[i]+ '</td><td>' + response.workwith[i]+ '</td><td>' + response.tradename[i]+ '</td><td>' + response.trdcon[i]+ '</td><td>' + response.trdadd[i]+ '</td><td>' + response.purvisit[i]+ '</td><td>' + response.orderb[i]+ '</td><td>' + response.ordamt[i]+ '</td><td>' + response.trdrmk[i]+ '</td></tr>';
+                    trHTML += '<tr><td>' + response.id[i]+ '</td><td>' + response.name[i]+ '</td><td>' + response.design[i]+ '</td><td>' + response.terit[i]+ '</td><td>' + response.headqtr[i]+ '</td><td>' + response.state[i]+ '</td><td>' + response.date[i]+ '</td><td>' + response.workwith[i]+ '</td><td>' + response.tradename[i]+ '</td><td>' + response.trdcon[i]+ '</td><td>' + response.trdadd[i]+ '</td><td>' + response.purvisit[i]+ '</td><td>' + response.orderb[i]+ '</td><td>' + response.ordamt[i]+ '</td><td>' + response.trdrmk[i]+ '</td></tr>';
                  }
                     // $.each(json, function(i, item) {
 

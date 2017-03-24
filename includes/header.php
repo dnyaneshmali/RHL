@@ -8,6 +8,7 @@ if (!isset($_SESSION['uid']))
 <html>
     <head>
         <title>Admin Panel</title>
+        <link rel="icon" href="images/RHL.png" />
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen">
@@ -25,9 +26,7 @@ if (!isset($_SESSION['uid']))
                         <ul class="left">
                             <li>
                                 <h1 class="logo-wrapper">
-                                    <a href="#" class="brand-logo darken-1" >
-                                        Royal Herbal Life
-                                    </a>    
+                                    <img src="images/rhl_logo.png" alt="rhl_logo" class="responsive-img site-brand">   
                                 </h1>
                                 <span class="logo-text">RHL</span>
                             </li>
@@ -36,7 +35,7 @@ if (!isset($_SESSION['uid']))
                         <ul class="right hid-mid-screen">
                              <li id="cdate">&nbsp;</li>
                              <li id="time"></li>
-                            <li>
+                         <!--   <li>
                                 <a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen">
                                     <i class="mdi-action-settings-overscan"></i>
                                 </a>
@@ -51,7 +50,7 @@ if (!isset($_SESSION['uid']))
                                 <a href="#" data-activates="chat-out" class="waves-effect waves-block waves-light chat-collapse">
                                     <i class="mdi-communication-chat"></i>
                                 </a>
-                            </li>
+                            </li>  -->
                         </ul>
                     </div>
 
@@ -129,14 +128,14 @@ if (!isset($_SESSION['uid']))
                         
                        <li class="bold ">
                             <a href="distributerslist.php" class="waves-effect waves-cyan">
-                                List Distributers Enquiry
+                                List Distributors Enquiry
 
                             </a>
                         </li>
 
                        <li class="bold ">
                             <a href="distributersdtls.php" class="waves-effect waves-cyan">
-                                List Distributers Details
+                                List Distributors Details
 
                             </a>
                         </li>

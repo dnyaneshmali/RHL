@@ -37,16 +37,21 @@ and open the template in the editor.
                                         <div id="table-wrap">
                                             <div class="row">
                                                 <div class="col s12 m12 l12">
-                                                    <table class="bordered" id="dsr-table" class="display nowrap">
+                                                    <table id="dsr-table" class="display nowrap">
                                                         <thead>
                                                             <tr>
                                                             <th data-field="id">Sr. No</th>
-                                                            <th data-field="id">Product Name </th>
                                                             <th data-field="id">Distributor Name </th>
                                                             <th data-field="Date">Distributor Town </th>
                                                             <th data-field="Time">TSO Name </th>
-                                                                <th data-field="Name">Contact </th>
-                                                                <th data-field="price">Payment Method</th>
+                                                            <th data-field="Name">Contact </th>
+                                                            <th data-field="price">Payment Method</th>
+                                                            <th data-field="id">Product Name </th>
+                                                            <th data-field="grams">Grams </th>
+                                                            <th data-field="id">Quantity Per case </th>
+                                                            <th data-field="id">Per case value </th>
+                                                            <th data-field="id">Total amount </th>
+                                                            <th data-field="id">Grand Total </th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -86,7 +91,7 @@ and open the template in the editor.
                     var trHTML = '';
                    for(var i=0; i<count; i++){
 
-                    trHTML += '<tr><td>' + i+ '</td><td>' + response.pname[i]+ '</td><td>' + response.id[i]+ '</td><td>' + response.name[i]+ '</td><td>' + response.design[i]+ '</td><td>' + response.terit[i]+ '</td><td>'+ response.headqtr[i]+ '</td>';
+                    trHTML += '<tr><td>' + i+ '</td><td>' + response.id[i]+ '</td><td>' + response.name[i]+ '</td><td>' + response.design[i]+ '</td><td>' + response.terit[i]+ '</td><td>'+ response.headqtr[i]+ '</td><td>' + response.pname[i]+ '</td><td>' + response.p_grams[i]+'</td><td>' + response.qty_case[i]+'</td><td>' + response.pcasevalue[i]+'</td><td>' + response.tcase[i]+'</td><td>' + response.tamount[i]+'</td></tr>';
                  }
                     // $.each(json, function(i, item) {
 

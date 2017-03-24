@@ -37,7 +37,7 @@ and open the template in the editor.
                                         <div id="table-wrap">
                                             <div class="row">
                                                 <div class="col s12 m12 l12">
-                                                    <table class="bordered" id="duser-table">
+                                                    <table class="display nowrap" id="duser-table">
 
 
                                                      <div class="row margin">

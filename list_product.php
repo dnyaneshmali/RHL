@@ -37,10 +37,10 @@ and open the template in the editor.
                                         <div id="table-wrap">
                                             <div class="row">
                                                 <div class="col s12 m12 l12">
-                                                    <table class="bordered" id="dsr-table" class="display nowrap">
+                                                    <table id="dsr-table" class="display nowrap">
                                                         <thead>
                                                             <tr>
-                                                            <th data-field="id">Sr No </th>
+                                                            <th data-field="id">ID </th>
                                                             <th data-field="name">Product Name </th>
                                                             <th data-field="price">Product Price </th>
                                                             <th data-field="qt">Product Quantity </th>
@@ -85,7 +85,7 @@ and open the template in the editor.
                     var trHTML = '';
                    for(var i=0; i<count; i++){
 
-                    trHTML += '<tr><td>' + i+ '</td><td>' + json[i].product_name+ '</td><td>' + json[i].product_price+ '</td><td>' + json[i].product_quantity+ '</td><td>' + json[i].product_desc+ '</td><td>' + json[i].product_date+ '</td><td><a href="javascript:void(0);" onclick="deleteproduct('+json[i].product_id+');" class="btn-floating red delete-btn tooltip" ><i class="small mdi-action-highlight-remove"></i><span class="tooltiptext">Delete</span></a></td>';
+                    trHTML += '<tr><td>' + json[i].product_id+ '</td><td>' + json[i].product_name+ '</td><td>' + json[i].product_price+ '</td><td>' + json[i].product_quantity+ '</td><td>' + json[i].product_desc+ '</td><td>' + json[i].product_date+ '</td><td><a href="javascript:void(0);" onclick="deleteproduct('+json[i].product_id+');" class="btn-floating red delete-btn tooltip" ><i class="small mdi-action-highlight-remove"></i><span class="tooltiptext">Delete</span></a></td>';
                  }
                     // $.each(json, function(i, item) {
 

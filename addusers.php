@@ -43,21 +43,21 @@ and open the template in the editor.
           <div class="input-field col s12">
             <i class="mdi-social-person-outline prefix"></i>
             <input id="fname" name="fname" type="text">
-            <label for="fname" class="center-align">First Name</label>
+            <label for="fname" class="center-align required">First Name</label>
           </div>
           </div>
           <div class="row margin">
           <div class="input-field col s12">
             <i class="mdi-social-person-outline prefix"></i>
             <input id="lname" name="lname" type="text">
-            <label for="lname"  class="center-align">Last Name</label>
+            <label for="lname"  class="center-align required">Last Name</label>
           </div>
           </div>
           <div class="row margin">
           <div class="input-field col s12">
             <i class="mdi-communication-email prefix"></i>
             <input id="email" name="email" type="text">
-            <label for="email"  class="center-align">Email</label>
+            <label for="email"  class="center-align required">Email</label>
           </div>
           </div>
 
@@ -77,14 +77,15 @@ and open the template in the editor.
           <div class="input-field col s12">
             <i class="mdi-action-settings-phone prefix"></i>
             <input id="mnumber" name="mnumber" type="text">
-            <label for="mnumber" class="center-align">Number</label>
+            <label for="mnumber" class="center-align required">Number</label>
           </div>
           </div>
           <div class="row margin">
           <div class="input-field col s12">
             <i class="mdi-social-location-city prefix"></i>
             <input id="city" name="city" type="text">
-            <label for="city" class="center-align">City</label>
+            <label for="city" class="center-align required">City</label>
+
           </div>
           </div>
 
@@ -92,7 +93,7 @@ and open the template in the editor.
           <div class="input-field col s12">
             <i class="mdi-action-aspect-ratio prefix"></i>
             <input id="territory" name="territory" type="text">
-            <label for="territory" class="center-align">Territory</label>
+            <label for="territory" class="center-align required">Territory</label>
           </div>
         </div>
 
@@ -100,21 +101,21 @@ and open the template in the editor.
           <div class="input-field col s12">
             <i class="mdi-action-dashboard prefix"></i>
             <input id="state" name="state" type="text">
-            <label for="state" class="center-align">State</label>
+            <label for="state" class="center-align required">State</label>
           </div>
         </div>
         <div class="row margin">
           <div class="input-field col s12">
             <i class="mdi-action-lock-outline prefix"></i>
             <input id="password" name="password" type="password">
-            <label for="password" class="center-align">Password</label>
+            <label for="password" class="center-align required">Password</label>
           </div>
         </div>
         <div class="row margin">
           <div class="input-field col s12">
             <i class="mdi-action-lock-outline prefix"></i>
             <input id="rpassword" name="rpassword" type="password">
-            <label for="rpassword" class="center-align">Reenter Password</label>
+            <label for="rpassword" class="center-align required">Reenter Password</label>
           </div>
         </div>
           <div class="row margin">
@@ -162,7 +163,10 @@ $('select').material_select();
                         required: true
                     },
                     mnumber: {
-                        required: true
+                        required: true,
+                        number:true,
+                        maxlength: 10,
+                        minlength: 10
                     },
                     city: {
                         required: true,

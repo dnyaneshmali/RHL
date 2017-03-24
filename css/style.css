@@ -50,6 +50,23 @@ Main style
 #main{
     padding-left: 240px;
 }
+
+img.responsive-img.site-brand {
+    width: 40%;
+    margin: 10px;
+}
+
+.required:before {
+    content: '*';
+    color: red;
+    padding: 3px;
+}
+
+li#cdate {
+    margin-right: 10px;
+    padding: 0px 10px;
+}
+
 #leftside-nav{
     position: fixed;
     width: 100px;

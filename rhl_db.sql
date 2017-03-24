@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 22, 2017 at 02:36 PM
+-- Generation Time: Mar 23, 2017 at 02:00 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -50,7 +50,8 @@ INSERT INTO `distributer_user` (`d_id`, `d_name`, `d_location`, `d_contact`, `d_
 (32, 'd5', 'Pune', '13565666', 'd5@gmail.com', 'Florida', '2017/3/22', '11:56 am', 'adminse'),
 (33, 'd6', 'Pune', '13565666655', 'd53@gmail.com', 'EON Free Zone', '2017/3/22', '11:59 am', 'adminse'),
 (47, 'd12', 'Pune', '34534534', 'd12@gmail.com', 'Bhavani Peth/411011/Shobhapur', '2017/3/22', '6:54 pm', 'adminse'),
-(49, 'dd1', 'Pune', '4534543534', 'dd2@gmail.com', 'Tukaram Nagar/411014/Kharadi', '2017/3/22', '6:59 pm', 'adminse');
+(49, 'dd1', 'Pune', '4534543534', 'dd2@gmail.com', 'Tukaram Nagar/411014/Kharadi', '2017/3/22', '6:59 pm', 'adminse'),
+(50, 'Pallavi ', 'kharadi ', '8975030396', 'hajaj@5555', 'EON Free Zone/411014/Kharadi', '2017/3/23', '12:03 pm', 'adminse');
 
 -- --------------------------------------------------------
 
@@ -186,7 +187,16 @@ INSERT INTO `orders` (`dis_name`, `dis_town`, `tso_name`, `contact`, `pay_method
 ('prashant', 'pune', 'ranjit', '8600249455', 'CHEQUE', 2),
 ('prashant', 'pune', 'ranjit', '8600249455', 'CHEQUE', 3),
 ('prashant', 'pune', 'ranjit', '8600249455', 'CHEQUE', 4),
-('d1', 'Pune', 'TSOName', '23453454', 'CASH', 5);
+('d1', 'Pune', 'TSOName', '23453454', 'CASH', 5),
+('o1', 'sdfdsf', 'fdsdf', '45345', 'CASH', 7),
+('O2', 'pune', 'dfsdf', '656565', 'CASH', 8),
+('O3', 'sdf', 'dfgdg', '454535', 'CASH', 9),
+('O4', 'sdfdsf', 'egf', '435345', 'CASH', 10),
+('O4', 'sdfdsf', 'egf', '435345', 'CASH', 11),
+('O4', 'sdfdsf', 'egf', '435345', 'CASH', 12),
+('O4', 'sdfdsf', 'egf', '435345', 'CASH', 13),
+('O2', 'd', 'sdfdf', '454', 'CASH', 14),
+('O4', 'd', 'sdfdf', '454', 'CASH', 15);
 
 -- --------------------------------------------------------
 
@@ -227,14 +237,13 @@ INSERT INTO `order_product` (`id`, `product`, `grams`, `qunt_case`, `percval`, `
 (15, 'SE', '20', '20', '20', '200', '2000', '4'),
 (16, 'alovera Facewash', '4', '34', '343', '34', '34', '5'),
 (17, 'alovera Facewash', '4', '34', '343', '34', '34', '5'),
-(18, '', '', '', '', '', '', '6'),
-(19, '', '', '', '', '', '', '6'),
-(20, 'alovera Facewash', '3', '3', '3', '3', '3', '7'),
-(21, 'alovera Facewash', '3', '3', '3', '3', '3', '7'),
-(22, '', '', '', '', '', '', '8'),
-(23, '', '', '', '', '', '', '8'),
-(24, '', '', '', '', '', '', '9'),
-(25, '', '', '', '', '', '', '9');
+(28, 'p3', '3', '34', '43', '3', '434', '7'),
+(29, 'p3', '3', '34', '43', '3', '434', '7'),
+(30, 'p', '12', '23', '10', '200', '300', '8'),
+(31, 'p', '12', '23', '10', '200', '300', '8'),
+(32, 'p2', '5', '6', '6', '7', '1', '9'),
+(33, 'p2', '5', '6', '6', '7', '1', '9'),
+(34, 'p3', '5', '5', '5', '5', '5', '15');
 
 -- --------------------------------------------------------
 
@@ -275,24 +284,27 @@ CREATE TABLE `sur_product` (
   `lo_skproduct` varchar(255) DEFAULT NULL,
   `br_pordpercnt` varchar(100) DEFAULT NULL,
   `lo_pordpercnt` varchar(100) DEFAULT NULL,
-  `suser_id` int(11) DEFAULT NULL
+  `suser_id` int(11) DEFAULT NULL,
+  `s_datetime` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `sur_product`
 --
 
-INSERT INTO `sur_product` (`id`, `br_hrproduct`, `lo_hrproduct`, `br_skproduct`, `lo_skproduct`, `br_pordpercnt`, `lo_pordpercnt`, `suser_id`) VALUES
-(1, 'jhgj,hgjhgj,hgjhgj,', 'hjhgj,hjgj,hjgj,', 'jhgjg,hgjhgj,jghj,', 'hjghj,hjhgj,jhgj,', '55', '55', 0),
-(2, 'lav,lav,lav,', 'kush,kush,kush,', 'hanuman,hanuman,vali,', 'sugriv,vali,hanuman,', '2000', '1000', 20),
-(3, 'fgh,klf,kjlfgd,', 'fgdjkl,lkfdg,lkhn,', 'klhghfkj,lghkjl,gkjlfd,', 'kjlghn,gjklfdgdjkl,kljgfdgfdhj,', '55', '55', 21),
-(4, 'h1,h,hh,', 'hhh,hhhh,hhhh,', 's,ss,sss,', 'ssss,sssss,sssss,', '40', '10', 22),
-(5, '9,909,909,', '900,909,9090,', '09,9808,0,', '09,090,090,', '09', '909', 23),
-(6, ',,,', ',,,', ',,,', ',,,', '', '', 24),
-(7, ',,,', ',,,', ',,,', ',,,', '', '', 25),
-(8, 'P,P,O,', 'P,K,G no ,', 'Gh,H,H,', 'H,Y,H,', '88', '9', 26),
-(9, 'h1,h2,21,', 'p1,2,r,', 'sdf,r,df,', 'df,df,sdf,', '4', '4', 27),
-(10, 'Susilk,Dove,Ponds,', 'Laksmi,Vicko,Dabar,', 'Lorel,Clean Clear,Fair & Lovely,', 'Boro Plus,Barnol,Ayur,', '50', '30', 28);
+INSERT INTO `sur_product` (`id`, `br_hrproduct`, `lo_hrproduct`, `br_skproduct`, `lo_skproduct`, `br_pordpercnt`, `lo_pordpercnt`, `suser_id`, `s_datetime`) VALUES
+(1, 'jhgj,hgjhgj,hgjhgj,', 'hjhgj,hjgj,hjgj,', 'jhgjg,hgjhgj,jghj,', 'hjghj,hjhgj,jhgj,', '55', '55', 0, '2017-03-22 5:29 pm'),
+(2, 'lav,lav,lav,', 'kush,kush,kush,', 'hanuman,hanuman,vali,', 'sugriv,vali,hanuman,', '2000', '1000', 20, '2017-03-22 5:29 pm'),
+(3, 'fgh,klf,kjlfgd,', 'fgdjkl,lkfdg,lkhn,', 'klhghfkj,lghkjl,gkjlfd,', 'kjlghn,gjklfdgdjkl,kljgfdgfdhj,', '55', '55', 21, '2017-03-22 5:29 pm'),
+(4, 'h1,h,hh,', 'hhh,hhhh,hhhh,', 's,ss,sss,', 'ssss,sssss,sssss,', '40', '10', 22, '2017-03-22 5:29 pm'),
+(5, '9,909,909,', '900,909,9090,', '09,9808,0,', '09,090,090,', '09', '909', 23, '2017-03-22 5:29 pm'),
+(6, ',,,', ',,,', ',,,', ',,,', '', '', 24, '2017-03-22 5:29 pm'),
+(7, ',,,', ',,,', ',,,', ',,,', '', '', 25, '2017-03-22 5:29 pm'),
+(8, 'P,P,O,', 'P,K,G no ,', 'Gh,H,H,', 'H,Y,H,', '88', '9', 26, '2017-03-22 5:29 pm'),
+(9, 'h1,h2,21,', 'p1,2,r,', 'sdf,r,df,', 'df,df,sdf,', '4', '4', 27, '2017-03-22 5:29 pm'),
+(10, 'Susilk,Dove,Ponds,', 'Laksmi,Vicko,Dabar,', 'Lorel,Clean Clear,Fair & Lovely,', 'Boro Plus,Barnol,Ayur,', '50', '30', 28, '2017-03-22 5:29 pm'),
+(11, 'sunsilk,dove,patanjali,', 'l1,l2,l3,', 'sb1,sb2,sb3,', 'sl1,sl2,sl3,', '20', '10', 29, '2017-03-23 12:18 pm'),
+(12, 'fh,hl,yu,', 'ghk,kkh,ghh,', 'gh,gg,bb,', 'bb,ghj,hh,', '5', '6', 30, '2017-03-23 1:13 pm');
 
 -- --------------------------------------------------------
 
@@ -318,7 +330,9 @@ CREATE TABLE `sur_user` (
 INSERT INTO `sur_user` (`id`, `name`, `address`, `state`, `retail_no`, `employe_no`, `scheme`, `advert`) VALUES
 (26, 'Pallavi ', 'Pune ', 'Maha', 89, 3, 'coupons,luckey draw,', 'TV,'),
 (27, 'sdfdsf', 'ewerwer', 'sdsfds', 34, 4, 'coupons,priceoff,', 'TV,News,'),
-(28, 'Dnyanesh', 'Pune', 'Maharashtra', 3, 5, 'priceoff,extra qty,', 'TV,News,');
+(28, 'Dnyanesh', 'Pune', 'Maharashtra', 3, 5, 'priceoff,extra qty,', 'TV,News,'),
+(29, 'sur1', 'pune', 'maharashtra', 3, 5, 'coupons,extra qty,', 'TV,News,'),
+(30, 'Justin ', 'uk', 'Florida ', 2, 45, 'coupons,priceoff,', 'TV,News,');
 
 -- --------------------------------------------------------
 
@@ -378,7 +392,7 @@ INSERT INTO `tbl_users` (`user_id`, `first_name`, `last_name`, `user_name`, `use
 (11, 'Matt', 'R', 'mattr', 'matt@gmail.com', '25f9e794323b453885f5181f1b624d0b', '343434343434', 'UP', 'Kanpur', 'ASM', 'ASM/KANPUR/1', '2017-03-20 06:07:38', '123456789', 'West', 1),
 (12, 'Pitter', 'K', 'pitterk', 'pitter@gmail.com', 'bbb8aae57c104cda40c93843ad5e6db8', '333333333', 'UP', 'Kanpur', 'ASM', 'ASM/KANPUR/2', '2017-03-20 06:08:55', '111111111', 'West', 1),
 (13, 'Kite', 'L', 'kitel', 'kite@gmail.com', '1bbd886460827015e5d605ed44252251', '343434', 'UP', 'Kanpur', 'TSO', 'TSO/KANPUR/1', '2017-03-20 06:10:17', '11111111', 'West', 0),
-(14, 'John', 'M', 'johnm', 'john@gmail.com', 'bae5e3208a3c700e3db642b6631e95b9', '1112212121', 'UP', 'Kanpur', 'TSO', 'TSO/KANPUR/2', '2017-03-20 06:11:26', '22222222', 'West', 0),
+(14, 'John', 'M', 'johnm', 'john@gmail.com', 'bae5e3208a3c700e3db642b6631e95b9', '1112212121', 'UP', 'Kanpur', 'TSO', 'TSO/KANPUR/2', '2017-03-20 06:11:26', '22222222', 'West', 1),
 (15, 'Patrick', 'P', 'patrickp', 'patrick@gmail.com', '1bbd886460827015e5d605ed44252251', '23423432423', 'Maharashtra', 'Mumbai', 'TSO', 'TSO/MUMBAI/1', '2017-03-20 06:13:22', '11111111', 'Kharghar', 0),
 (16, 'Smith', 'W', 'smithw', 'smith@gmail.com', '1bbd886460827015e5d605ed44252251', '23232323', 'Maharashtra', 'Pune', 'ASM', 'ASM/PUNE/1', '2017-03-20 06:31:56', '11111111', 'Khardi', 0),
 (17, 'Rick', 'C', 'rickc', 'rick@gmail.com', 'e11170b8cbd2d74102651cb967fa28e5', '2323223', 'Maharashtra', 'Pune', 'ASM', 'ASM/PUNE/2', '2017-03-20 06:33:31', '1111111111', 'Shivajinagar', 0),
@@ -490,7 +504,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `distributer_user`
 --
 ALTER TABLE `distributer_user`
-  MODIFY `d_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `d_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 --
 -- AUTO_INCREMENT for table `dist_appoint`
 --
@@ -510,12 +524,12 @@ ALTER TABLE `ms_stock`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT for table `order_product`
 --
 ALTER TABLE `order_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 --
 -- AUTO_INCREMENT for table `sales_user`
 --
@@ -525,22 +539,22 @@ ALTER TABLE `sales_user`
 -- AUTO_INCREMENT for table `sur_product`
 --
 ALTER TABLE `sur_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `sur_user`
 --
 ALTER TABLE `sur_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT for table `tbl_products`
 --
 ALTER TABLE `tbl_products`
-  MODIFY `product_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `product_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tbl_users`
 --
 ALTER TABLE `tbl_users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT for table `users`
 --
