@@ -146,7 +146,7 @@ $('select').material_select();
                                       'success'
                                     )
                                 //alert('Success');
-                                //$('#adduserform').clearForm();
+                                $('#addproductform').clearForm();
                             } else {
 
                                 swal(

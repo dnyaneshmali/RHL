@@ -124,13 +124,10 @@ $rs =  mysqli_query($con, $query);
 
 
 
-$gettso=  isset($_REQUEST['selecttso'])?$_REQUEST['selecttso']:"";
-//$role = 'RSM';
- //echo $dauser_id;
+$uid=  isset($_REQUEST['uid'])?$_REQUEST['uid']:"";
  
-if(isset($gettso)){
-    //echo $dauser_id;
-$query = "SELECT * FROM tbl_users WHERE user_role = 'TSO' ";
+if(isset($uid)){
+$query = "SELECT * FROM tbl_users";
 
 $rs =  mysqli_query($con, $query);
  
@@ -142,16 +139,10 @@ $rs =  mysqli_query($con, $query);
     else{
       
         while($row = mysqli_fetch_assoc($rs))
-            //print_r($row );
-           // array_push($data, $row['user_id']);
 $data[] = $row;
 
     }
 echo json_encode($data);
- //print_r($data);
 
-
+//echo"inphp";
 }
-
-
-

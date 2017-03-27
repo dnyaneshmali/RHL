@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 23, 2017 at 02:00 PM
+-- Generation Time: Mar 24, 2017 at 02:12 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -196,7 +196,9 @@ INSERT INTO `orders` (`dis_name`, `dis_town`, `tso_name`, `contact`, `pay_method
 ('O4', 'sdfdsf', 'egf', '435345', 'CASH', 12),
 ('O4', 'sdfdsf', 'egf', '435345', 'CASH', 13),
 ('O2', 'd', 'sdfdf', '454', 'CASH', 14),
-('O4', 'd', 'sdfdf', '454', 'CASH', 15);
+('O4', 'd', 'sdfdf', '454', 'CASH', 15),
+('', '', '', '', '', 16),
+('', '', '', '', '', 17);
 
 -- --------------------------------------------------------
 
@@ -243,7 +245,9 @@ INSERT INTO `order_product` (`id`, `product`, `grams`, `qunt_case`, `percval`, `
 (31, 'p', '12', '23', '10', '200', '300', '8'),
 (32, 'p2', '5', '6', '6', '7', '1', '9'),
 (33, 'p2', '5', '6', '6', '7', '1', '9'),
-(34, 'p3', '5', '5', '5', '5', '5', '15');
+(34, 'p3', '5', '5', '5', '5', '5', '15'),
+(35, '', '', '', '', '', '', '16'),
+(36, '', '', '', '', '', '', '17');
 
 -- --------------------------------------------------------
 
@@ -304,7 +308,11 @@ INSERT INTO `sur_product` (`id`, `br_hrproduct`, `lo_hrproduct`, `br_skproduct`,
 (9, 'h1,h2,21,', 'p1,2,r,', 'sdf,r,df,', 'df,df,sdf,', '4', '4', 27, '2017-03-22 5:29 pm'),
 (10, 'Susilk,Dove,Ponds,', 'Laksmi,Vicko,Dabar,', 'Lorel,Clean Clear,Fair & Lovely,', 'Boro Plus,Barnol,Ayur,', '50', '30', 28, '2017-03-22 5:29 pm'),
 (11, 'sunsilk,dove,patanjali,', 'l1,l2,l3,', 'sb1,sb2,sb3,', 'sl1,sl2,sl3,', '20', '10', 29, '2017-03-23 12:18 pm'),
-(12, 'fh,hl,yu,', 'ghk,kkh,ghh,', 'gh,gg,bb,', 'bb,ghj,hh,', '5', '6', 30, '2017-03-23 1:13 pm');
+(12, 'fh,hl,yu,', 'ghk,kkh,ghh,', 'gh,gg,bb,', 'bb,ghj,hh,', '5', '6', 30, '2017-03-23 1:13 pm'),
+(13, 'h1,h2,h3,', 'h4,h5,h6,', 's1,s2,s3,', 's4,s5,s6,', '20', '30', 31, '2017-03-24 5:50 pm'),
+(14, ',,,', ',,,', ',,,', ',,,', '', '', 32, '2017-03-24 6:09 pm'),
+(15, ',,,', ',,,', ',,,', ',,,', '', '', 33, '2017-03-24 6:10 pm'),
+(16, ',,,', ',,,', ',,,', ',,,', '', '', 34, '2017-03-24 6:11 pm');
 
 -- --------------------------------------------------------
 
@@ -332,7 +340,11 @@ INSERT INTO `sur_user` (`id`, `name`, `address`, `state`, `retail_no`, `employe_
 (27, 'sdfdsf', 'ewerwer', 'sdsfds', 34, 4, 'coupons,priceoff,', 'TV,News,'),
 (28, 'Dnyanesh', 'Pune', 'Maharashtra', 3, 5, 'priceoff,extra qty,', 'TV,News,'),
 (29, 'sur1', 'pune', 'maharashtra', 3, 5, 'coupons,extra qty,', 'TV,News,'),
-(30, 'Justin ', 'uk', 'Florida ', 2, 45, 'coupons,priceoff,', 'TV,News,');
+(30, 'Justin ', 'uk', 'Florida ', 2, 45, 'coupons,priceoff,', 'TV,News,'),
+(31, 'rest survey ', 'pune ', 'Maharashtra', 2, 3, 'coupons,priceoff,', 'TV,News,'),
+(32, '', '', '', 0, 0, '', ''),
+(33, '', '', '', 0, 0, '', ''),
+(34, '', '', '', 0, 0, '', '');
 
 -- --------------------------------------------------------
 
@@ -524,12 +536,12 @@ ALTER TABLE `ms_stock`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `order_product`
 --
 ALTER TABLE `order_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 --
 -- AUTO_INCREMENT for table `sales_user`
 --
@@ -539,17 +551,17 @@ ALTER TABLE `sales_user`
 -- AUTO_INCREMENT for table `sur_product`
 --
 ALTER TABLE `sur_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `sur_user`
 --
 ALTER TABLE `sur_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 --
 -- AUTO_INCREMENT for table `tbl_products`
 --
 ALTER TABLE `tbl_products`
-  MODIFY `product_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `product_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tbl_users`
 --

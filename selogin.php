@@ -14,7 +14,7 @@ $password = isset($_REQUEST['password']) ? $_REQUEST['password'] : "";
 $designation = isset($_REQUEST['designation']) ? $_REQUEST['designation'] : "";
 
 
-$query = "SELECT user_name, user_role  FROM tbl_users where user_name = '$name' and user_show_pass = " . "'$password'" . " and user_role = '$designation' and user_status = 1 limit 1 ";
+$query = "SELECT user_id, user_name, user_role  FROM tbl_users where user_name = '$name' and user_show_pass = " . "'$password'" . " and user_role = '$designation' and user_status = 1 limit 1 ";
 
 $rs = mysqli_query($con, $query);
 
@@ -24,9 +24,11 @@ $row = mysqli_fetch_array($rs);
 if ($count == 1) {
     $username = $row['user_name'];
     $usertype = $row['user_role'];
-    $udata = array('status' => 'OK', 'username' => $username, 'usertype' => $usertype);
+    $userid = $row['user_id'];
+    $udata = array('status' => 'OK', 'username' => $username, 'usertype' => $usertype,'userid' => $userid);
 
     echo(json_encode($udata));
 } else {
-    echo(json_encode('NOTOK'));
+
+	    echo(json_encode('NOTOK'));
 }

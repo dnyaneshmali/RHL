@@ -133,6 +133,7 @@ $('select').material_select();
                 $('#urole').change(function(){
 
                  var role = $('select[name=urole]').val();
+                 //localStorage.setItem('srole',role);
                 //console.log(role);
                 $.ajax({
                 type: "POST",
@@ -200,13 +201,30 @@ $('select').material_select();
                                 console.log(response);
                                 location.reload();
 
-
                             }
                         });
 
 
     })
 }
+/*
+$(document).ready(function(){
+
+                            //var role = $('select[name=urole]').val();
+                            var selecteditem = localStorage.getItem('srole');
+                            alert(selecteditem);
+                                $('select[name="urole"]').val(selecteditem);
+
+
+});
+*/
+
+$(document).ready(function() {
+
+    $("#urole option[value='TSO']").prop('selected', true);
+
+    // you need to specify id of combo to set right combo, if more than one combo
+});
                 
         
                 function dstatus(id){

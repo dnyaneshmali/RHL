@@ -225,7 +225,7 @@ $('select').material_select();
                                       'success'
                                     )
                                 //alert('Success');
-                                //$('#adduserform').clearForm();
+                                $('#adduserform').clearForm();
                             } else {
 
                                 swal(
