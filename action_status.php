@@ -19,7 +19,7 @@ $con = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME) or
  //echo $duser_id;
  
 if(isset($duser_id)){
-	echo $duser_id;
+	//echo $duser_id;
 $query = "delete from tbl_users where user_id = '".$duser_id."'";
 
 $rs =  mysqli_query($con, $query);
@@ -122,27 +122,3 @@ $rs =  mysqli_query($con, $query);
 
 }
 
-
-
-$uid=  isset($_REQUEST['uid'])?$_REQUEST['uid']:"";
- 
-if(isset($uid)){
-$query = "SELECT * FROM tbl_users";
-
-$rs =  mysqli_query($con, $query);
- 
- if(!$rs)
-    {
-        echo("NOTWORK");
-        die('Error :'.mysqli_error());  
-    }
-    else{
-      
-        while($row = mysqli_fetch_assoc($rs))
-$data[] = $row;
-
-    }
-echo json_encode($data);
-
-//echo"inphp";
-}
